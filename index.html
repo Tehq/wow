@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
   margin: 0;
@@ -10,18 +9,37 @@ body {
 
 .top-container {
   background-color: #f1f1f1;
-  padding: 30px;
+  padding: 5px;
   text-align: center;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    width: 25%;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+    border: 1px solid green;
+}
+.button:hover {
+    background: green;
+}
+
+.button:selected {
+	border: none;
 }
 
 .header {
-  padding: 10px 16px;
+  padding: 0px 0px;
   background: #555;
   color: #f1f1f1;
 }
 
 .content {
-  padding: 16px;
+  padding: 10px;
 }
 
 .sticky {
@@ -31,33 +49,36 @@ body {
 }
 
 .sticky + .content {
-  padding-top: 102px;
+  padding-top: 50px;
 }
 </style>
 </head>
 <body>
 
 <div class="top-container">
-  <h1>Scroll Down</h1>
-  <p>Scroll down to see the sticky effect.</p>
+  <h1>Home Page</h1>
 </div>
 
 <div class="header" id="myHeader">
-  <h2>My Header</h2>
+	<a href="index.html"><button class = "button" id="home">Home</button></a>
+    <a href="rankings.html"><button class = "button" id="rankings">Page 2</button></a>
+    <a href ="affixes.html"><button class = "button" id="affixes">Page 3</button></a>
+    <a href="#"><button class = "button" id="dungeons">Page 4</button></a>
 </div>
 
 <div class="content">
-  <h3>On Scroll Sticky Header</h3>
-  <p>The header will stick to the top when you reach its scroll position.</p>
-  <p>Scroll back up to remove the sticky effect.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+	<p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p>
+    <p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p>
+    <p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p>
+    <p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p>
+    <p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p>
+    <p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p>
+    <p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p>
+    <p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p>
+    <p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p>
+    <p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p>
+    <p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p>
+    <p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p><p> ABCDEFGHIJKLMNOPQRSTUVWXYZ </p>
 </div>
 
 <script>
