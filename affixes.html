@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<body onload = "updateClock(); icons();">
+<h2 style = "font-size:60px; text-align:center; color:black"> This Week's Modifiers </h2>
+<div id="time-elapsed"></div>
+<img style = "display:inline" id="pone" width = "50" height = "50" border ="2"> 
+<p style ="font-size:40px; text-align:center; display:inline; vertical-align:top" id="hone"> </p> 
+<p style = "color:black; text-align:left" id="pdone"> </p>
+<img style = "display:inline" id="ptwo" width = "50" height = "50" border ="2"> 
+<p style ="font-size:40px; text-align:center; display:inline; vertical-align:top" id="htwo"> </p> 
+<p style = "color:black" id="pdtwo"> </p>
+<img style = "display:inline" id="pthree" width = "50" height = "50" border ="2"> 
+<p style ="font-size:40px; text-align:center; display:inline; vertical-align:top" id="hthree"> </p> 
+<p style = "color:black" id="pdthree"> </p>
+<p id="extras"> </p>
+</body>
+
+<script>
+var day;
+var imglink0;
+var imglink1;
+var imglink2;
+var desc0;
+var desc1;
+var desc2;
+var cl0;
+var cl1;
+var cl2;
+var ex0;
+var ex1;
+var ex2;
+
+	var startDateTime = new Date(2018, 2, 20, 11, 0, 0, 0);
+	var startStamp = startDateTime.getTime();
+	var timer;
+    let incweek = 0;
+    var d;
+    var h;
+    var m;
+    var s;
+    
+	function daysInMonth (month, year) {
+    	return new Date(year, month, 0).getDate();
+	}
+    
+	function updateClock() {
+    	newDate = new Date();
+    	newStamp = newDate.getTime();
+    	var diff = Math.round((newStamp-startStamp)/1000);
+    
+     	d = Math.floor(diff/(24*60*60));
+    	diff = diff-(d*24*60*60);
+    	h = Math.floor(diff/(60*60));
+    	diff = diff-(h*60*60);
+    	m = Math.floor(diff/(60));
+    	diff = diff-(m*60);
+    	s = diff;
+    
+    if (d/7 >= 1) {
+    	startDateTimedate = startDateTime.getDate() + 7;
+        if (startDateTimedate > daysInMonth(startDateTime.getMonth+1, startDateTime.getFullYear)) {
+        	startDateTime.setDate(startDateTimedate - daysInMonth(startDateTime.getMonth+1, startDateTime.getFullYear));
+        	startDateTime.setMonth(startDateTime.getMonth+1);
+        } else { 
+        	startDateTime.setDate(startDateTimedate);
+        }
+        startStamp = startDateTime.getTime();
+        incweek = incweek + 1;
+        if (incweek == 11) {
+        	incweek = 0;
+        }
+        updateClock();
+    } else {
+    }
+    //thisweek = allweeks[incweek];
+    //alert("this week "+thisweek);
+    var allweeks = [["Sanguine", "Necrotic", "Fortified"], ["Bursting", "Skittish", "Tyrannical"], ["Teeming", "Quaking", "Fortified"], ["Raging", "Necrotic", "Tyrannical"], ["Bolstering", "Skittish", "Fortified"], ["Teeming", "Volcanic", "Tyrannical"], ["Sanguine", "Grevious", "Fortified"], ["Bolstering", "Explosive", "Tyrannical"], ["Bursting", "Quaking", "Fortified"],["Raging", "Volcanic", "Tyrannical"], ["Teeming", "Explosive", "Fortified"], ["Bolstering", "Grevious", "Tyrannical"]];
+
+thisweek = allweeks[incweek];
+
+if (thisweek[0] == "Sanguine") {
+        imglink0 = "http://blzmedia-a.akamaihd.net/wow/icons/56/spell_shadow_bloodboil.jpg"; 
+        desc0 = "? When slain, non-boss enemies leave behind a lingering pool of ichor that heals their allies and damages players";
+        cl0 = "green";
+        ex0 = "[Sanguine] Typhoon (Druid)";
+        //sanguine
+} else if (thisweek[0] == "Bolstering") {
+        imglink0 = "http://blzmedia-a.akamaihd.net/wow/icons/56/ability_warrior_battleshout.jpg"; 
+        desc0 = "? When any non-boss enemy dies, its death cry empowers nearby allies, increasing their maximum health and damage by 20%";
+        cl0 = "orange";
+        //bolstering
+} else if (thisweek[0] == "Raging") {
+        imglink0 = "http://blzmedia-a.akamaihd.net/wow/icons/56/ability_warrior_focusedrage.jpg"; 
+        desc0 = "? Non-boss enemies enrage at 30% health remaining, dealing 100% increased damage until defeated"; 
+        cl0 = "orange";
+        //raging
+} else if (thisweek[0] == "Teeming") {
+        imglink0 = "http://blzmedia-a.akamaihd.net/wow/icons/56/spell_nature_massteleport.jpg"; 
+        desc0 = "? Additional non-boss enemies are present throughout the dungeon";
+        cl0 = "orange";
+        //teeming
+} else if (thisweek[0] == "Bursting") {
+        imglink0 = "http://blzmedia-a.akamaihd.net/wow/icons/56/ability_ironmaidens_whirlofblood.jpg"; 
+        desc0 = "? When slain, non-boss enemies explode, causing all players to suffer 10% of their max health in damage over 4 sec. This effect stacks";
+        cl0 = "orange";
+        //bursting
+}
+
+// ------------------------------------------------------------------ //
+
+if (thisweek[1] == "Necrotic") {
+        imglink1 = "http://blzmedia-a.akamaihd.net/wow/icons/56/spell_deathknight_necroticplague.jpg"; 
+        desc1 = "? All enemies' melee attacks apply a stacking blight that inflicts damage over time and reduces healing received";
+        cl1 = "red";
+        ex1 = "[Necrotic] Shadowmeld removes stacks of necrotic, but will drop all aggro (Night Elf Racial), Blood DK Anti-Magic Shell with Legend Cloak";
+        //necrotic
+} else if (thisweek[1] == "Skittish") {
+        imglink1 = "http://blzmedia-a.akamaihd.net/wow/icons/56/spell_magic_lesserinvisibilty.jpg"; 
+        desc1 = "? Enemies pay far less attention to threat generated by tanks";
+        cl1 = "orange";
+        //skittish
+} else if (thisweek[1] == "Volcanic") {
+        imglink1 = "http://blzmedia-a.akamaihd.net/wow/icons/56/spell_shaman_lavasurge.jpg"; 
+        desc1 = "? While in combat, enemies periodically cause gouts of flame to erupt beneath the feet of distant players"; 
+        cl1 = "green";
+        //volcanic
+} else if (thisweek[1] == "Explosive") {
+        imglink1 = "http://blzmedia-a.akamaihd.net/wow/icons/56/spell_fire_felflamering.jpg"; 
+        desc1 = "?  While in combat, enemies periodically summon Explosive Orbs that will detonate if not destroyed";
+        cl1 = "orange";
+        //explosive
+} else if (thisweek[1] == "Quaking") {
+        imglink1 = "http://blzmedia-a.akamaihd.net/wow/icons/56/spell_nature_earthquake.jpg"; 
+        desc1 = "? Periodically, all players emit a shockwave, inflicting damage and interrupting nearby allies";
+        cl1 = "green";
+        //quaking
+} else if (thisweek[1] == "Grevious") {
+        imglink1 = "http://blzmedia-a.akamaihd.net/wow/icons/56/ability_backstab.jpg"; 
+        desc1 = "? When injured below 90% health, players will suffer increasing damage over time until healed above 90% health";
+        cl1 = "orange";
+}
+
+// ------------------------------------------------------------------ //
+
+if (thisweek[2] == "Fortified") {
+        imglink2 = "http://blzmedia-a.akamaihd.net/wow/icons/56/ability_toughness.jpg"; 
+        desc2 = "? Non-boss enemies have 20% more health and inflict up to 30% increased damage";
+        cl2 = "orange";
+        ex2 = "[Fortified] Blood Elf Racial Silence";
+        //fortified
+} else if (thisweek[2] == "Tyrannical") {
+        imglink2 = "http://blzmedia-a.akamaihd.net/wow/icons/56/achievement_boss_archaedas.jpg"; 
+        desc2 = "? Boss enemies have 40% more health and inflict up to 15% increased damage";
+        cl2 = "red";
+        //tyrannical
+}
+document.getElementById('hone').innerHTML = thisweek[0];
+document.getElementById('hone').style.color = cl0;
+document.getElementById('pdone').innerHTML = desc0;
+document.getElementById('pone').src = imglink0;
+document.getElementById('htwo').innerHTML = thisweek[1];
+document.getElementById('htwo').style.color = cl1;
+document.getElementById('pdtwo').innerHTML = desc1;
+document.getElementById('ptwo').src = imglink1;
+document.getElementById('hthree').innerHTML = thisweek[2];
+document.getElementById('hthree').style.color = cl2;
+document.getElementById('pdthree').innerHTML = desc2;
+document.getElementById('pthree').src = imglink2;
+
+}
+</script>
+</html>

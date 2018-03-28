@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+ 	
+  <body onload ="colorednames(); makeboldnames(); initialpage(); updateoptions();">
+   <form id = "mainbar">
+   <br><br>
+   <select onchange = "updateoptions();" id = "sstype" name = "stype" style="background-color: #3a3a3a; color:white; width: 13%; position:fixed; left:15%">
+     <option value= "metric" style = "display:none" selected = "selected">Metric</option>
+     <option value="dps">Damage Done</option>
+     <option value="hps">Healing Done</option>
+   </select>
+
+   <select onchange = "updateoptions();" id = "sdifficulty" name="difficulty" style="background-color: #3a3a3a; color:white; width: 9%; position:absolute; left:28%">
+     <option value="Difficulty" style = "display: none" selected = "selected">Difficulty</option>
+     <option value="n">Normal</option>
+     <option value="h">Heroic</option>
+     <option value="m">Mythic</option> 
+     <option value="mplus">Mythic +</option>
+   </select>
+   
+   <select onchange = "updateoptions();" id = "sboss" name="boss" style="background-color: #3a3a3a; color:white; width: 16%; position:absolute;left:37%">
+     <option value="na" style = 'display:none' selected = "selected">Dungeon</option>
+     <option value="cos">Court of Stars</option>
+     <option value="arc">Arcway</option>
+     <option value="mos">Maw of Souls</option>
+     <option value="hov">Halls of Valor</option>
+     <option value="brh">Blackrook Hold</option>
+     <option value="dht">Darkheart Thicket</option>
+     <option value="nl">Neltharion's Lair</option>
+     <option value="votw">Vault of the Wardens</option>
+     <option value="eoa">Eye of Azshara</option>
+   </select>
+   
+   <select onchange = "updateoptions();" id = "sregion" name="Region" style="background-color: #3a3a3a;color:white; width: 14%; position:absolute;left:53%">
+     <option value="region" style = "display:none" selected = "selected">Region</option>
+     <option value="all">All Regions</option>
+     <option value="usoce">US and Oceanic</option>
+     <option value="eu">Europe</option>
+     <option value="kr">Korea</option>
+     <option value="ch">China</option>
+     <option value="tw">Taiwan</option>
+     
+    </select>
+  
+    <select onchange = "updateoptions();" id = "sclass" name="Class" style="background-color: #3a3a3a;color:white; width: 13%; position:absolute;left:67%">
+    	<optgroup label = "All Classes" style="text-color: #000000">
+     		<option value="All Classes" selected = "selected">All Classes</option> <!-- original selection -->
+            <option value = "All Tanks">All Tanks</option>
+            <option value = "All Healers">All Healers</option>
+            <option value = "All DPS">All DPS</option>
+        </optgroup>
+     
+     	<optgroup label = "Death Knight" style="color:#C41F3B;">
+     		<option value="Frost Death Knight">Frost</option> 
+     <!-- original selection -->
+     		<option value="Unholy Death Knight">Unholy</option>
+     		<option value="Blood Death Knight">Blood</option>
+     	</optgroup>
+     
+     	<optgroup label = "Demon Hunter" style="color:#A330C9;">
+     		<option value="Havoc Demon Hunter">Havoc</option> <!-- original selection -->
+     		<option value="Vengeance Demon Hunter">Vengeance</option>
+     	</optgroup>
+        
+     	<optgroup label = "Druid" style="color:#FF7D0A;">
+     		<option value="Feral Druid">Feral</option> <!-- original selection -->
+            <option value="Balance Druid">Balance</option>
+            <option value="Restoration Druid">Restoration</option>
+            <option value="Guardian Druid">Guardian</option>
+        </optgroup>
+        
+       	<optgroup label = "Hunter" style="color:#ABD473;">
+        
+     		<option value="Survival Hunter">Survival</option> <!-- original selection -->
+            <option value="Beast Mastery Hunter">Beast Mastery</option>
+            <option value="Marksmanship Hunter">Marksmanship</option>
+        </optgroup>   
+        
+        <optgroup label = "Mage" style="color:#69CCF0;">
+     		<option value="Frost Mage">Frost</option> <!-- original selection -->
+            <option value="Fire Mage">Fire</option>
+            <option value="Arcane Mage">Arcane</option>
+     	</optgroup>
+        
+        <optgroup label = "Monk" style="color:#00FF96;">
+     		<option value="Windwalker Monk">Windwalker</option> <!-- original selection -->
+            <option value="Mistweaver Monk">Mistweaver</option>
+            <option value="Brewmaster Monk">Brewmaster</option>
+     	</optgroup>
+        
+        <optgroup label = "Paladin" style="color:#F58CBA;">
+     		<option value="Retribution Paladin">Retribution</option>
+            <option value="Holy Paladin">Holy</option>
+            <option value="Protection Paladin">Protection</option><!-- original selection -->
+     	</optgroup>
+        
+        <optgroup label = "Priest" style="color:#FFFFFF;">
+     		<option value="Shadow Priest">Shadow</option> <!-- original selection -->
+            <option value="Holy Priest">Holy</option>
+            <option value="Discpline Priest">Discpline</option>
+     	</optgroup>
+        
+        <optgroup label = "Rogue" style="color:#FFF569;">
+     		<option value="Outlaw Rogue">Outlaw</option> <!-- original selection -->
+            <option value="Assassination Rogue">Assassination</option>
+            <option value="Subtlety Rogue">Subtlety</option>
+     	</optgroup>
+        
+        <optgroup label = "Shaman" style="color:#0070DE;">
+     		<option value="Elemental Shaman">Elemental</option> <!-- original selection -->
+            <option value="Enhancement Shaman">Enhancement</option>
+            <option value="Restoration Shaman">Restoration</option>
+    	 </optgroup>
+         
+         <optgroup label = "Warlock" style="color:#9482C9;">
+     		<option value="Affliction Warlock">Affliction</option> <!-- original selection -->
+            <option value="Demonology Warlock">Demonology</option>
+            <option value="Destruction Warlock">Destruction</option>
+     	</optgroup>
+        
+        <optgroup label = "Warrior" style="color:#C79C6E;">
+     		<option value="Arms Warrior">Arms</option> <!-- original selection -->
+            <option value="Fury Warrior">Fury</option>
+            <option value="Protection Warrior">Protection</option>
+     	</optgroup>
+    </select>
+    
+    
+    <!--  update variables according to selected paramters in options  -->
+    
+    
+</form>
+
+<br>
+<br>
+
+<table id = "t01" class = "table1" style = "width: 100%;">
+  <tr id = "headings">
+    <th>Rank</th>  <!--onclick="sortTable(0)"-->
+    <th>Player</th>
+    <th>DPS</th>
+    <th>Item Level</th>
+    <th>Artifact Level</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th style = "display:none;">9</th>
+    <th style = "display:none;">10</th>
+    <th style = "display:none;">11</th>
+    <th style = "display:none;">12</th>
+    <th style = "display:none;">13</th>
+    <th style = "display:none;">14</th>
+    <th style = "display:none;">15</th>
+    <th style = "display:none;">16</th>
+  </tr>
+  
+  <tr id = "player1"> 
+    <td></td>
+    <td>Traad</td>
+    <td>1039123</td> <!-- 3=damage -->
+    <td style="display:none;">13023</td> <!-- 4=healing -->
+    <td>907</td>
+    <td>53</td>
+    <td>6/15/2017</td>
+    <td>3:31</td>
+    <td style="display:none;">Warrior</td>
+    <td style="display:none;">US and Oceanic</td>
+    <td style="display:none;">Heroic</td>
+    <td style="display:none;">Fury</td>
+    <td style="display:none;"></td>
+    <td style="display:none;"></td>
+    <td style="display:none;"></td> <!-- 15 = hidden spec tag -->
+  </tr>
+  
+  <tr id = "player2">
+    <td></td>
+    <td>Nighthounds</td>
+    <td>900123</td>
+    <td style="display:none;">43237</td>
+    <td >913</td>
+    <td>54</td>
+    <td>6/12/2017</td>
+    <td>4:02</td>
+    <td style="display:none;">Druid</td>
+    <td style="display:none;">US and Oceanic</td>
+    <td style="display:none;">Heroic</td>
+    <td style="display:none;">Restoration</td>
+    <td style="display:none;"></td>
+    <td style="display:none;"></td>
+    <td style="display:none;"></td> <!-- 15 = hidden spec tag -->
+  </tr>
+  
+  <tr id = "player3">
+    <td></td>
+    <td>Ouru</td>
+    <td>1203492</td>
+    <td style="display:none;">30315</td>
+    <td>917</td>
+    <td>58</td>
+    <td>6/11/2017</td>
+    <td>4:31</td>
+    <td style="display:none;">Demon Hunter</td>
+    <td style="display:none;">US and Oceanic</td>
+    <td style="display:none;">Heroic</td>
+    <td style="display:none;">Havoc</td>
+    <td style="display:none;"></td> <!-- class info 12-->
+    <td style="display:none;"></td> <!-- spec info 13-->
+    <td style="display:none;"></td> <!-- 15 = hidden spec tag -->
+  </tr>
+  
+  <tr id = "player4">
+    <td></td>
+    <td>Revival</td>
+    <td>324562</td>
+    <td style="display:none;">604812</td>
+    <td>910</td>
+    <td>55</td>
+    <td>6/14/2017</td>
+    <td>4:36</td>
+    <td style="display:none;">Monk</td>
+    <td style="display:none;">US and Oceanic</td>
+    <td style="display:none;">Heroic</td>
+    <td style="display:none;">Mistweaver</td>
+    <td style="display:none;"></td> 
+    <td style="display:none;"></td>
+    <td style="display:none;"></td> <!-- hidden spec tag -->
+  </tr>
+  
+  <tr id = "player5">
+    <td></td>
+    <td>SomeShaman</td>
+    <td>712355</td>
+    <td style="display:none;">7135</td>
+    <td>911</td>
+    <td>52</td>
+    <td>6/13/2017</td>
+    <td>4:32</td>
+    <td style="display:none;">Shaman</td>
+    <td style="display:none;">US and Oceanic</td>
+    <td style="display:none;">Heroic</td>
+    <td style="display:none;">Restoration</td>
+    <td style="display:none;"></td>
+    <td style="display:none;"></td>
+    <td style="display:none;"></td> <!-- 15 = hidden spec tag -->
+  </tr>
+  
+</table>
+
+
+<!-- make player names in the table bolder to stand out -->
+
+
+<script>
+function makeboldnames() {
+	table = document.getElementById("t01");
+	var lenrows = table.rows.length;
+	for (i=1; i<lenrows; i++) {
+    	var rx = document.getElementById("player"+i);
+        cx = rx.getElementsByTagName("td");
+		cx[1].style.fontWeight = "900";
+    }
+}
+</script>
+
+<!--  allow the headings to sort the table  -->
+    
+<script>
+function updateoptions() {
+    var theclass = document.getElementById("sclass");
+    var displayclass = theclass.options[theclass.selectedIndex].text;
+    var displayclassindex = theclass.options[theclass.selectedIndex].index;
+  	// 0 = "All Classes, etc
+    // 4 = frost dk, 11 = resto druid, 16 = frost mage, 23 = holy paladin
+    // 26 = holy priest, 33 = resto shaman, 39 = prot warr, 24 = prot pala
+    
+    
+    var theregion = document.getElementById("sregion");
+    var displayregion= theregion.options[theregion.selectedIndex].text;
+    
+    var thedifficulty = document.getElementById("sdifficulty");
+    var displaydifficulty = thedifficulty.options[thedifficulty.selectedIndex].text;
+    
+    var theboss = document.getElementById("sboss");
+    var displayboss= theboss.options[theboss.selectedIndex].text;
+    
+    var thesetting = document.getElementById("sstype");
+    displaytype = thesetting.options[thesetting.selectedIndex].text;
+    
+   	dpshps(displaytype);
+    displayonly(displaydifficulty, displayregion, displayclass, displayclassindex);
+    
+    colorednames();
+    rankthem(displaytype);
+    initialpage();
+}
+</script>
+
+
+
+<!--  display dps or hps rankings and change the heading to match  -->
+
+
+<script>
+function dpshps(disp) {
+    table = document.getElementById("t01");
+    len = table.rows.length;
+    if (disp == "Damage Done") {
+    	for (i = 1; i < (len); i++) {
+        	var Row = document.getElementById("player"+i);
+        	columns = Row.getElementsByTagName("td");
+            columns[2].style.display = 'table-cell';
+    		columns[3].style.display = 'none';
+            var headrowd = document.getElementById("headings");
+            var headcold = headrowd.getElementsByTagName("th");
+            headcold[2].innerText = "DPS";
+        }
+    } else if (disp == "Healing Done") {
+    	for (i = 1; i < (len); i++) {
+        	/* alert(len); */
+        	var Row = document.getElementById("player"+i);
+        	columns = Row.getElementsByTagName("td");         
+            columns[2].style.display = 'none';
+            columns[3].style.display = 'table-cell';
+            var headrowd = document.getElementById("headings");
+            var headcold = headrowd.getElementsByTagName("th");
+            headcold[2].innerText = "HPS";
+        }
+    } else if (disp == "Metric"){ 
+    	//none
+    }
+}
+</script>
+
+
+<!--  rank the dps/hps numbers and display them in the table  -->
+
+
+<script>
+function rankthem(disp) {
+    var rankingarray = [];
+	table = document.getElementById("t01");
+    var lenr = table.rows.length; 
+    var x = lenr - 1; // 5
+    rankingarray.length = x; //0 1 2 3 4
+    var current = 0;
+    var oldmax = 0;
+
+    for (i = 1; i <= x; i++) {
+    	if (disp == "Damage Done") {
+    		rankingarray[i-1] = table.rows[i].cells[2].innerHTML;
+    	} else if (disp == "Healing Done") {
+    		rankingarray[i-1] = table.rows[i].cells[3].innerHTML;
+    	} else if (disp == "Metric") {
+        	//none
+        }
+    }
+    rankingarray.sort(function(a,b){return b-a}); // 1 to 3, 4 to 6
+    for (k = 0; k < perpage; k++) {
+       	alert(rankingarray[k]);
+        if 
+    }
+}
+</script>
+
+
+<!--  match the spec selected in the options to a class  -->
+
+
+<script>
+function matchclass(disp) {
+	classindex = 0;
+    specindex = 0;
+	table = document.getElementById("t01");
+    var lenc = table.rows.length;
+    for (i = 1; i < lenc; i++) {
+        var mrow = document.getElementById("player"+i);
+        mcol = mrow.getElementsByTagName("td");
+        mcol[1].style.fontWeight = "800";
+       	
+        //DRUIDS = 4//
+        //resto druid
+        //box is all heals, druid is set resto..box is all healers, druid is set all healers..box is set all healers, druid is set all classes..box all classes druid is set resto.. box is all classes, druid is set all healers
+        //alert("disp is "+disp+" "+mcol[8].innerText+" "+mcol[11].innerText);
+        if (disp == "All Healers" && mcol[8].innerText == "Druid" && mcol[11].innerText == "Restoration" || disp == "All Classes" && mcol[8].innerText == "Druid" && mcol[11].innerText == "Restoration" || mcol[8].innerText == "Druid" && disp == mcol[11].innerText) {
+        	
+            mcol[12].innerText = 0;
+            mcol[13].innerText = 0;
+           //mcol[8].innerText = "Druid";
+            //mcol[11].innerText = "Restoration";
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+            // feral druid
+        } else if (disp == "All DPS" && mcol[8].innerText == "Druid" && mcol[11].innerText == "Feral" || disp == "All Classes" && mcol[8].innerText == "Druid" && mcol[11].innerText == "Feral" || mcol[8].innerText == "Druid" && mcol[11].innerText == disp) {
+          	mcol[12].innerText = 0;
+            mcol[13].innerText = 1;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+        
+        //balance druid
+        } else if (disp == "All DPS" && mcol[8].innerText == "Druid" && mcol[11].innerText == "Balance" || disp == "All Classes" && mcol[8].innerText == "Druid" && mcol[11].innerText == "Balance" || mcol[8].innerText == "Druid" && mcol[11].innerText == disp) {
+            mcol[12].innerText = 0;
+            mcol[13].innerText = 2;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+            
+          //guardian druid
+          } else if (disp == "All Tanks" && mcol[8].innerText == "Druid" && mcol[11].innerText == "Guardian" || disp == "All Classes" && mcol[8].innerText == "Druid" && mcol[11].innerText == "Guardian" || mcol[8].innerText == "Druid" && mcol[11].innerText == disp) {
+           mcol[12].innerText = 0;
+            mcol[13].innerText = 3;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+            
+            //MONKS = 3//
+            //mistweaver monk
+        } else if (disp == "All Healers" && mcol[8].innerText == "Monk" && mcol[11].innerText == "Mistweaver" || disp == "All Classes" && mcol[8].innerText == "Monk" && mcol[11].innerText == "Mistweaver" || mcol[8].innerText == "Monk" && mcol[11].innerText == disp) {
+          mcol[12].innerText = 1;
+            mcol[13].innerText = 4;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+           
+           //windwalker monk
+          } else if (disp == "All DPS" && mcol[8].innerText == "Monk" && mcol[11].innerText == "Windwalker" || disp == "All Classes" && mcol[8].innerText == "Monk" && mcol[11].innerText == "Windwalker" || mcol[8].innerText == "Monk" && mcol[11].innerText == disp) {
+            mcol[12].innerText = 1;
+            mcol[13].innerText = 5;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+            
+            //brewmaster monk
+            } else if (disp == "All Tanks" && mcol[8].innerText == "Monk" && mcol[11].innerText == "Brewmaster" || disp == "All Classes" && mcol[8].innerText == "Monk" && mcol[11].innerText == "Brewmaster" || mcol[8].innerText == "Monk" && mcol[11].innerText == disp) {
+          mcol[12].innerText = 1;
+            mcol[13].innerText = 6;
+            alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+            
+            //PRIESTS = 3//
+            // disc priest
+        } else if (disp == "All Healers" && mcol[8].innerText == "Priest" && mcol[11].innerText == "Discpline" || disp == "All Classes" && mcol[8].innerText == "Priest" && mcol[11].innerText == "Discpline" || mcol[8].innerText == "Priest" && mcol[11].innerText == disp) {
+           mcol[12].innerText = 2;
+            mcol[13].innerText = 7;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+       }     
+       		//holy priest
+            else if (disp == "All Healers" && mcol[8].innerText == "Priest" && mcol[11].innerText == "Holy" || disp == "All Classes" && mcol[8].innerText == "Priest" && mcol[11].innerText == "Holy" || mcol[8].innerText == "Priest" && mcol[11].innerText == disp) {
+            mcol[12].innerText = 2;
+            mcol[13].innerText = 8;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+                 
+       }     
+       		//shadow priest
+            else if (disp == "All DPS" && mcol[8].innerText == "Priest" && mcol[11].innerText == "Shadow" || disp == "All Classes" && mcol[8].innerText == "Priest" && mcol[11].innerText == "Shadow" || mcol[8].innerText == "Priest" && mcol[11].innerText == disp) {
+         	mcol[12].innerText = 2;
+            mcol[13].innerText = 9;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+            
+            //SHAMANS = 3//
+            // resto shaman
+       } else if (disp == "All Healers" && mcol[8].innerText == "Shaman" && mcol[11].innerText == "Restoration" || disp == "All Classes" && mcol[8].innerText == "Shaman" && mcol[11].innerText == "Restoration" || mcol[8].innerText == "Shaman" && mcol[11].innerText == disp) {
+           mcol[12].innerText = 3;
+            mcol[13].innerText = 10;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+            
+         }   // elemental shaman
+            else if (disp == "All DPS" && mcol[8].innerText == "Shaman" && mcol[11].innerText == "Elemental" || disp == "All Classes" && mcol[8].innerText == "Shaman" && mcol[11].innerText == "Elemental" || mcol[8].innerText == "Shaman" && mcol[11].innerText == disp) {
+            mcol[12].innerText = 3;
+            mcol[13].innerText = 11;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+
+			//enhancement shaman
+        }   else if (disp == "All DPS" && mcol[8].innerText == "Shaman" && mcol[11].innerText == "Enhancement" || disp == "All Classes" && mcol[8].innerText == "Shaman" && mcol[11].innerText == "Enhancement" || mcol[8].innerText == "Shaman" && mcol[11].innerText == disp) {
+    		mcol[12].innerText = 3;
+            mcol[13].innerText = 12;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+            
+        //PALADINS = 3    
+     	//holy paladin
+     	} else if (disp == "All Healers" && mcol[8].innerText == "Paladin" && mcol[11].innerText == "Holy" || disp == "All Classes" && mcol[8].innerText == "Paladin" && mcol[11].innerText == "Holy" || mcol[8].innerText == "Paladin" && mcol[11].innerText == disp) {
+           mcol[12].innerText = 4;
+            mcol[13].innerText = 13;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+        
+        //ret paladin
+     	} else if (disp == "All DPS" && mcol[8].innerText == "Paladin" && mcol[11].innerText == "Retribution" || disp == "All Classes" && mcol[8].innerText == "Paladin" && mcol[11].innerText == "Retribution" || mcol[8].innerText == "Paladin" && mcol[11].innerText == disp) {
+          mcol[12].innerText = 4;
+            mcol[13].innerText = 14;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+            
+        //prot paladin
+     	} else if (disp == "All Tanks" && mcol[8].innerText == "Paladin" && mcol[11].innerText == "Protection" || disp == "All Classes" && mcol[8].innerText == "Paladin" && mcol[11].innerText == "Protection" || mcol[8].innerText == "Paladin" && mcol[11].innerText == disp) {
+           mcol[12].innerText = 4;
+            mcol[13].innerText = 15;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+            
+       //DEMON HUNTERS = 2//     
+       //havoc dh
+     	} else if (disp == "All DPS" && mcol[8].innerText == "Demon Hunter" && mcol[11].innerText == "Havoc" || disp == "All Classes" && mcol[8].innerText == "Demon Hunter" && mcol[11].innerText == "Havoc" || mcol[8].innerText == "Demon Hunter" && mcol[11].innerText == disp) {
+           mcol[12].innerText = 5;
+            mcol[13].innerText = 16;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+       
+       //veng dh
+     	} else if (disp == "All Tanks" && mcol[8].innerText == "Demon Hunter" && mcol[11].innerText == "Vengeance" || disp == "All Classes" && mcol[8].innerText == "Demon Hunter" && mcol[11].innerText == "Vengeance" || mcol[8].innerText == "Demon Hunter" && mcol[11].innerText == disp) {
+            mcol[12].innerText = 5;
+            mcol[13].innerText = 17;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+            
+       // WARRIORS //     
+       //fury warrior
+     	} else if (disp == "All DPS" && mcol[8].innerText == "Warrior" && mcol[11].innerText == "Fury" || disp == "All Classes" && mcol[8].innerText == "Warrior" && mcol[11].innerText == "Fury" || mcol[8].innerText == "Warrior" && mcol[11].innerText == disp) {
+       		mcol[12].innerText = 6;
+            mcol[13].innerText = 18;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+        
+        //arms warrior
+     	} else if (disp == "All DPS" && mcol[8].innerText == "Warrior" && mcol[11].innerText == "Arms" || disp == "All Classes" && mcol[8].innerText == "Warrior" && mcol[11].innerText == "Arms" || mcol[8].innerText == "Warrior" && mcol[11].innerText == disp) {
+           mcol[12].innerText = 6;
+            mcol[13].innerText = 19;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+       
+        //prot warrior
+     	} else if (disp == "All Tanks" && mcol[8].innerText == "Warrior" && mcol[11].innerText == "Protection" || disp == "All Classes" && mcol[8].innerText == "Warrior" && mcol[11].innerText == "Protection" || mcol[8].innerText == "Warrior" && mcol[11].innerText == disp) {
+           mcol[12].innerText = 6;
+            mcol[13].innerText = 20;
+            //alert("we have a "+mcol[11].innerText+" "+mcol[8].innerText);
+      
+        } else { } // TODO DK, HUNTER, MAGE, ROGUE
+        
+    }		
+}
+</script>
+
+
+<!-- color the names according to the player class -->
+
+
+<script>
+function colorednames() {
+	table = document.getElementById("t01");
+    var lenc = table.rows.length;
+   
+    for (i = 1; i < (lenc); i++) {
+        var crow = document.getElementById("player"+i);
+        ccol = crow.getElementsByTagName("td");
+        if (ccol[8].innerText == "Druid") {
+			ccol[1].style.color = "#FF7D0A";
+        } else if (ccol[8].innerText == "Monk") {
+			ccol[1].style.color = "#00FF96";    
+        } else if (ccol[8].innerText == "Death Knight") {
+			ccol[1].style.color = "#C41F3B";  
+        } else if (ccol[8].innerText == "Demon Hunter") {
+			ccol[1].style.color = "#A330C9";
+        } else if (ccol[8].innerText == "Hunter") {
+			ccol[1].style.color = "#ABD473";
+        } else if (ccol[8].innerText == "Mage") {
+			ccol[1].style.color = "#69CCF0";
+        } else if (ccol[8].innerText == "Paladin") {
+			ccol[1].style.color = "#F58CBA";
+        } else if (ccol[8].innerText == "Priest") {
+			ccol[1].style.color = "#FFFFFF";
+        } else if (ccol[8].innerText == "Rogue") {
+			ccol[1].style.color = "#FFF569";
+        } else if (ccol[8].innerText == "Shaman") {
+			ccol[1].style.color = "#0070DE";
+        } else if (ccol[8].innerText == "Warlock") {
+			ccol[1].style.color = "#9482C9";
+        } else if (ccol[8].innerText == "Warrior") {
+			ccol[1].style.color = "#C79C6E";
+        } else { ccol[1].style.color = "#000000"; }
+    }		
+}
+</script>
+
+
+<script>
+function insertAfter(newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+</script>
+
+<script>
+function insertBefore(newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode);
+}
+</script>
+
+<script>
+function initialpage() {
+	var table = document.getElementById("t01");
+    var len = table.rows.length;
+
+    if (usepage == table.rows.length - 1) {
+    	document.getElementById("nextpage").disabled = true;
+        document.getElementById("prevpage").disabled = true;
+    }
+    for (i = usepage + 1; i < len; i++) {
+        table.rows[i].style.display = 'none';
+    }
+}
+</script>
+<br>
+<span>
+	<button id="prevpage" style = "width: 7%; padding: 8px; border: none; text-align:center; color: white; position:fixed; left:42%;  top: 90%; background-color: black;" onclick="prevp();" disabled><</button> 
+	<button id="nextpage" style = "width: 7%; padding: 8px; border: none; text-align:center; color: white; position:fixed; left: 52%; top: 90%; background-color: black;" onclick="nextp(); ">></button>
+</span>
+
+<script>
+function printarray() {
+	var table = document.getElementById("t01");
+    var len = table.rows.length;
+    for (i = 1; i < len; i++) {
+    	var Row = document.getElementByClassName("table1");
+    	var columns = Row.getElementsByTagName("td");
+    }
+}
+</script>
+
+<script>
+	switches = 0;
+    thedisplay = "";
+    rankedsofar = 0;
+    backswitches = 0;
+    mswitches = 0;
+	perpage = 3; // display how many per page
+    minusval = 1;
+    var table = document.getElementById("t01");
+   	if (perpage == 1) {
+    	usepage = 1;
+        minusval = 2;
+    } else if (perpage > table.rows.length - 1) {
+    	usepage = table.rows.length - 1;
+    } else { 
+        usepage = perpage; 
+        minusval = 1;
+    }
+</script>
+
+<!--
+<script>
+function prevp() {
+	//maxswitches = Math.floor(table.row.length/perpage);
+    //alert(maxswitches);
+	
+    //alert("px");
+    movedrows = 0;
+    var x = table.rows.length-1;
+    var y = x+1;
+    //alert("ba "+backswitches);
+    //alert("q1 "+Math.floor((x/perpage)));
+    if (backswitches >= Math.floor(x/usepage)-minusval) {
+    	// for 1 to 2
+        // insert row table.rows.length - 1
+        	//alert("yes");
+        	for (i=1; i<=usepage; i++) {
+   				insertBefore(table.rows[table.rows.length-1], table.rows[1]);
+                movedrows = movedrows + 1;
+    		}
+            
+        	for (i=1; i<=usepage; i++) {
+            	//alert("show " +i);
+        		table.rows[i].style.display = 'table-row'; 
+        	}
+            //} // x-x%perpage+1
+            for (i=usepage+1; i<table.rows.length; i++) {
+            	//alert("hide " +i);
+            	table.rows[i].style.display = 'none'; 
+            } 
+        //alert("switches is now reset");
+        //switches = 0; //switches = 0;
+        document.getElementById("prevpage").disabled = true;
+        document.getElementById("nextpage").disabled = false;
+    } else {//if (switches < Math.floor((table.rows.length-1)/perpage)) {
+    	for (i=1; i<=usepage; i++) {
+        	movedrows = movedrows + 1;
+   			insertBefore(table.rows[table.rows.length-1], table.rows[1]);
+    	}
+        //alert("we moved "+movedrows+" rows");
+        for (i=1; i<=usepage; i++) {
+        	table.rows[i].style.display = 'table-row';         
+        }
+        for (i=usepage+1; i<table.rows.length; i++) {
+        	table.rows[i].style.display = 'none'; 
+        }
+        //document.getElementById("prevpage").disabled = true;
+        document.getElementById("nextpage").disabled = false;
+   	}
+    //initialpage();
+    backswitches =backswitches + 1;
+    switches = Math.max(0, switches - 1);
+    rankthem(displaytype); // rankthemback();
+   	mswitches = (Math.floor((table.rows.length-1)/usepage));
+    
+   //alert("backswitchs "+backswitches+"\nswitchs "+switches+"\nPossible switches "+(Math.floor(x/usepage))+"\nRemainder "+Math.floor((table.rows.length-1)%usepage)+"\nNumber of elements "+(table.rows.length-1));
+}
+</script>
+
+<script>
+function nextp() {
+    var movedrows = 0;
+    x = table.rows.length - 1;
+    if (switches >= Math.floor(x/usepage)-minusval) {
+        	for (i=1; i<=usepage; i++) {
+   				insertAfter(table.rows[1], table.rows[table.rows.length-1]);
+                movedrows = movedrows + 1;
+    		}
+            if (usepage == 1) {
+               for (i = 1; i < table.rows.length; i++) {
+            		table.rows[i].style.display = 'table-row'; 
+            	} 
+            } else {
+        		for (i=1; i<=x%usepage; i++) {
+        			table.rows[i].style.display = 'table-row'; 
+        		}
+            }
+            if (usepage == 1) {
+               for (i = 2; i<table.rows.length; i++) {
+            		table.rows[i].style.display = 'none'; 
+            	} 
+            } else {
+            	for (i=(x%usepage)+1; i<table.rows.length; i++) {
+            		table.rows[i].style.display = 'none'; 
+            	} 
+           }
+        document.getElementById("nextpage").disabled = true;
+        document.getElementById("prevpage").disabled = false;
+    } else {//if (switches < Math.floor((table.rows.length-1)/perpage)) {
+    	for (i = 1; i <= usepage; i++) {
+        	movedrows = movedrows + 1;
+   			insertAfter(table.rows[1], table.rows[table.rows.length-1]);  
+    	}
+        for (i=1; i<=usepage; i++) {
+        	table.rows[i].style.display = 'table-row';         
+        }
+        for (i=usepage+1; i<table.rows.length; i++) {
+        	table.rows[i].style.display = 'none'; 
+        }
+ 
+        document.getElementById("prevpage").disabled = false;
+   	}
+    switches = switches +1;
+    backswitches = Math.max(0, backswitches - 1);
+    rankthem(displaytype);
+    mswitches = (Math.floor((table.rows.length-1)/usepage));
+}
+</script>
+
+-->
+
+<!--  hide the players that do not match the chosen settings  -->
+
+
+<script>
+function displayonly(difficulty, region, whichclass, classindex) {
+	
+    matchclass(whichclass);
+    len = table.rows.length;
+ 
+    allHealers = ["Restoration", "Holy", "Mistweaver", "Discpline", "Restorationd", "Restorations", "Holypa", "Holypr"];
+    allDPS = ["Havoc", "Fury", "Balance", "Arms", "Assassination", "Affliction", "Destruction", "Demonology", "Outlaw", "Subtlety", "Survival", "Marksmanship", "Beast Mastery", "Frost", "Fire", "Arcane", "Unholy", "Windwalker", "Frostm", "Frostd"];
+    allTanks = ["Protection", "Vengeance", "Blood", "Brewmaster", "Guardian", "Protectionw", "Protectionp"];
+    
+    for (i = 1; i < len; i++) {
+    	
+        Row = document.getElementById("player"+i);
+        columns = Row.getElementsByTagName("td");
+        findx(whichclass, i);
+       
+   		if (whichclass == "All Healers") {
+        	if (allHealers.indexOf(columns[11].innerText) > -1 && columns[10].innerText == difficulty && columns[9].innerText == region) {
+        		table.rows[i].style.display = 'table-row';
+           	} else { 
+          		table.rows[i].style.display = 'none';
+           	}
+        } else if (whichclass == "All Tanks") {
+        	if (allTanks.indexOf(columns[11].innerText) > -1 && columns[10].innerText == difficulty && columns[9].innerText == region) {
+        		table.rows[i].style.display = 'table-row';
+           	} else { 
+          		table.rows[i].style.display = 'none';
+        	}
+        } else if (whichclass == "All DPS") {
+        	if (allDPS.indexOf(columns[11].innerText) > -1 && columns[10].innerText == difficulty && columns[9].innerText == region) {
+        		table.rows[i].style.display = 'table-row';
+           	} else { 
+          		table.rows[i].style.display = 'none';
+        	}
+        } else if (whichclass == "All Classes") {
+        	 if (allHealers.indexOf(columns[11].innerText) > -1 && columns[10].innerText == difficulty && columns[9].innerText == region || allDPS.indexOf(columns[11].innerText) > -1 && columns[10].innerText == difficulty && columns[9].innerText == region || allTanks.indexOf(columns[11].innerText) > -1 && columns[10].innerText == difficulty && columns[9].innerText == region) {
+        		table.rows[i].style.display = 'table-row';
+           	} else { 
+          		table.rows[i].style.display = 'none';
+           	}
+        } else if (columns[11].innerText == whichclass && classindex != 11 && classindex != 33 && classindex != 23 && classindex != 26 && classindex != 16 && classindex != 4 && classindex != 39 && columns[10].innerText == difficulty && columns[9].innerText == region) {
+        	table.rows[i].style.display = 'table-row';
+            // resto druid
+        } else if (columns[11].innerText == "Restorationd" && classindex == 11 && columns[10].innerText == difficulty && columns[9].innerText == region) {
+        	table.rows[i].style.display = 'table-row';
+          // resto shaman
+        } else if (columns[11].innerText == "Restorations" && classindex == 33 && columns[10].innerText == difficulty && columns[9].innerText == region) {	
+        	//alert("shaman class index "+classindex);
+        	table.rows[i].style.display = 'table-row';
+      		//holy paladin
+        } else if (columns[11].innerText == "Holypa" && classindex == 23 &&  columns[10].innerText == difficulty && columns[9].innerText == region) {
+        	table.rows[i].style.display = 'table-row';
+    		//holy priest
+        } else if (columns[11].innerText == "Holypr" && classindex == 26 &&  columns[10].innerText == difficulty && columns[9].innerText == region) {
+        	table.rows[i].style.display = 'table-row';
+ 		//frost mage
+        } else if (columns[11].innerText == "Frostm" && classindex == 16 && columns[10].innerText == difficulty && columns[9].innerText == region) {
+        	table.rows[i].style.display = 'table-row';
+    	//frost dk
+        } else if (columns[11].innerText == "Frostd" && classindex == 4 && columns[10].innerText == difficulty && columns[9].innerText == region) {
+        	table.rows[i].style.display = 'table-row';
+        	//prot warrior
+        } else if (columns[11].innerText == "Protectionw" && classindex == 39 &&  columns[10].innerText == difficulty && columns[9].innerText == region) {
+        	table.rows[i].style.display = 'table-row';
+   			
+            //prot pally
+        } else if (columns[11].innerText == "Protectionp" && classindex == 24 && columns[10].innerText == difficulty && columns[9].innerText == region) {
+        	table.rows[i].style.display = 'table-row';
+          
+        } else { 
+        	table.rows[i].style.display = 'none';
+        }
+       
+        		
+	}
+}
+</script>
+
+<script>
+	function findx(classindex, ind) {	
+    players = document.getElementById("player"+ind);
+	classinfo = players.getElementsByTagName("td");
+        
+    if (classindex == "Restoration") {  
+    	if (classinfo[8].innerText == "Druid") {
+        	classinfo[11].innerText = "Restorationd";
+        } else if (classinfo[8].innerText == "Shaman") {
+        	classinfo[11].innerText = "Restorations";   
+        }
+	} else if (classindex == "Frost") { 
+    	if (classinfo[8].innerText == "Mage") {
+        	classinfo[11].innerText = "Frostm";
+        } else if (classinfo[8].innerText == "Death Knight") {
+        	classinfo[11].innerText = "Frostd";   
+        }
+    } else if (classindex == "Protection") {
+    	if (classinfo[8].innerText == "Warrior") {
+    		classinfo[11].innerText = "Protectionw";
+    	} else if (classinfo[8].innerText == "Paladin"){
+           	classinfo[11].innerText = "Protectionp";
+        }
+    } else if (classindex == "Holy") {
+    	if (classinfo[8].innerText == "Priest") {
+        	classinfo[11].innerText = "Holypr";
+        } else if (classinfo[8].innerText == "Paladin"){
+        	classinfo[11].innerText = "Holypa";
+        }
+    } else { }
+}
+</script>
+
+    </body>
+</html>
