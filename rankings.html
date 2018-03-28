@@ -632,10 +632,74 @@ function rankthem(disp) {
     rankingarray.sort(function(a,b){return b-a}); // 1 to 3, 4 to 6
     for (k = 0; k < perpage; k++) {
        	alert(rankingarray[k]);
-        if 
+      
     }
 }
 </script>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sort a HTML Table Alphabetically</title>
+<style>
+table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+</style>
+</head>
+
+<script>
+function sortTable(disp) {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("t01");
+  switching = true;
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.getElementsByTagName("TR");
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      if (disp == "Damage Done") {
+    		x = rows[i].getElementsByTagName("TD")[2];
+            y = rows[i + 1].getElementsByTagName("TD")[2];
+    	} else if (disp == "Healing Done") {
+    		x = rows[i].getElementsByTagName("TD")[3];
+            y = rows[i + 1].getElementsByTagName("TD")[3];
+    	} else if (disp == "Metric") {
+        	//none
+        }
+      //check if the two rows should switch place:
+      if (parseFloat(x.innerHTML) > parseFloat(y.innerHTML)) {
+        //if so, mark as a switch and break the loop:
+        shouldSwitch= true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+
 
 
 <!--  match the spec selected in the options to a class  -->
