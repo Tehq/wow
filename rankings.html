@@ -589,10 +589,49 @@ function initialpage() {
 }
 </script>
 <br>
-<span>
-	<button id="prevpage" style = "width: 7%; padding: 8px; border: none; text-align:center; color: white; position:fixed; left:42%;  top: 90%; background-color: black;" onclick="prevp();" disabled><</button> 
-	<button id="nextpage" style = "width: 7%; padding: 8px; border: none; text-align:center; color: white; position:fixed; left: 52%; top: 90%; background-color: black;" onclick="nextp(); ">></button>
-</span>
+
+<style>
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+}
+
+.center {
+    text-align: center;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+</style>
+
+<body>
+<div class="center">
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">&raquo;</a>
+  </div>
+</div>
+</body>
+
 
 <script>
 function printarray() {
@@ -625,116 +664,6 @@ function printarray() {
     }
 </script>
 
-<!--
-<script>
-function prevp() {
-	//maxswitches = Math.floor(table.row.length/perpage);
-    //alert(maxswitches);
-	
-    //alert("px");
-    movedrows = 0;
-    var x = table.rows.length-1;
-    var y = x+1;
-    //alert("ba "+backswitches);
-    //alert("q1 "+Math.floor((x/perpage)));
-    if (backswitches >= Math.floor(x/usepage)-minusval) {
-    	// for 1 to 2
-        // insert row table.rows.length - 1
-        	//alert("yes");
-        	for (i=1; i<=usepage; i++) {
-   				insertBefore(table.rows[table.rows.length-1], table.rows[1]);
-                movedrows = movedrows + 1;
-    		}
-            
-        	for (i=1; i<=usepage; i++) {
-            	//alert("show " +i);
-        		table.rows[i].style.display = 'table-row'; 
-        	}
-            //} // x-x%perpage+1
-            for (i=usepage+1; i<table.rows.length; i++) {
-            	//alert("hide " +i);
-            	table.rows[i].style.display = 'none'; 
-            } 
-        //alert("switches is now reset");
-        //switches = 0; //switches = 0;
-        document.getElementById("prevpage").disabled = true;
-        document.getElementById("nextpage").disabled = false;
-    } else {//if (switches < Math.floor((table.rows.length-1)/perpage)) {
-    	for (i=1; i<=usepage; i++) {
-        	movedrows = movedrows + 1;
-   			insertBefore(table.rows[table.rows.length-1], table.rows[1]);
-    	}
-        //alert("we moved "+movedrows+" rows");
-        for (i=1; i<=usepage; i++) {
-        	table.rows[i].style.display = 'table-row';         
-        }
-        for (i=usepage+1; i<table.rows.length; i++) {
-        	table.rows[i].style.display = 'none'; 
-        }
-        //document.getElementById("prevpage").disabled = true;
-        document.getElementById("nextpage").disabled = false;
-   	}
-    //initialpage();
-    backswitches =backswitches + 1;
-    switches = Math.max(0, switches - 1);
-    rankthem(displaytype); // rankthemback();
-   	mswitches = (Math.floor((table.rows.length-1)/usepage));
-    
-   //alert("backswitchs "+backswitches+"\nswitchs "+switches+"\nPossible switches "+(Math.floor(x/usepage))+"\nRemainder "+Math.floor((table.rows.length-1)%usepage)+"\nNumber of elements "+(table.rows.length-1));
-}
-</script>
-
-<script>
-function nextp() {
-    var movedrows = 0;
-    x = table.rows.length - 1;
-    if (switches >= Math.floor(x/usepage)-minusval) {
-        	for (i=1; i<=usepage; i++) {
-   				insertAfter(table.rows[1], table.rows[table.rows.length-1]);
-                movedrows = movedrows + 1;
-    		}
-            if (usepage == 1) {
-               for (i = 1; i < table.rows.length; i++) {
-            		table.rows[i].style.display = 'table-row'; 
-            	} 
-            } else {
-        		for (i=1; i<=x%usepage; i++) {
-        			table.rows[i].style.display = 'table-row'; 
-        		}
-            }
-            if (usepage == 1) {
-               for (i = 2; i<table.rows.length; i++) {
-            		table.rows[i].style.display = 'none'; 
-            	} 
-            } else {
-            	for (i=(x%usepage)+1; i<table.rows.length; i++) {
-            		table.rows[i].style.display = 'none'; 
-            	} 
-           }
-        document.getElementById("nextpage").disabled = true;
-        document.getElementById("prevpage").disabled = false;
-    } else {//if (switches < Math.floor((table.rows.length-1)/perpage)) {
-    	for (i = 1; i <= usepage; i++) {
-        	movedrows = movedrows + 1;
-   			insertAfter(table.rows[1], table.rows[table.rows.length-1]);  
-    	}
-        for (i=1; i<=usepage; i++) {
-        	table.rows[i].style.display = 'table-row';         
-        }
-        for (i=usepage+1; i<table.rows.length; i++) {
-        	table.rows[i].style.display = 'none'; 
-        }
- 
-        document.getElementById("prevpage").disabled = false;
-   	}
-    switches = switches +1;
-    backswitches = Math.max(0, backswitches - 1);
-    rankthem(displaytype);
-    mswitches = (Math.floor((table.rows.length-1)/usepage));
-}
-</script>
-
--->
 
 <!--  hide the players that do not match the chosen settings  -->
 
