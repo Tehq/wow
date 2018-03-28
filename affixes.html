@@ -1,9 +1,88 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+}
 
-<body onload = "updateClock(); icons();">
-<h2 style = "font-size:60px; text-align:center; color:black"> This Week's Modifiers </h2>
-<div id="time-elapsed"></div>
+.top-container {
+  background-color: #f1f1f1;
+  padding: 5px;
+  text-align: center;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    width: 25%;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+    border: 1px solid green;
+}
+.button:hover {
+    background: green;
+}
+
+.button:selected {
+	border: none;
+}
+
+.header {
+  padding: 0px 0px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 10px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 50px;
+}
+</style>
+</head>
+<body>
+
+<div class="top-container">
+  <h1>Home Page</h1>
+</div>
+
+<div class="header" id="myHeader">
+	<a href="index.html"><button class = "button" id="home">Home</button></a>
+    <a href="rankings.html"><button class = "button" id="rankings">Page 2</button></a>
+    <a href ="affixes.html"><button class = "button" id="affixes">Page 3</button></a>
+    <a href="#"><button class = "button" id="dungeons">Page 4</button></a>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+<body onload = "updateClock();">
 <img style = "display:inline" id="pone" width = "50" height = "50" border ="2"> 
 <p style ="font-size:40px; text-align:center; display:inline; vertical-align:top" id="hone"> </p> 
 <p style = "color:black; text-align:left" id="pdone"> </p>
@@ -13,7 +92,6 @@
 <img style = "display:inline" id="pthree" width = "50" height = "50" border ="2"> 
 <p style ="font-size:40px; text-align:center; display:inline; vertical-align:top" id="hthree"> </p> 
 <p style = "color:black" id="pdthree"> </p>
-<p id="extras"> </p>
 </body>
 
 <script>
