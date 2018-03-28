@@ -1,49 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-	
-body {
-  margin: 0;
-  font-family: Arial;
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-.top-container {
-  background-color: #f1f1f1;
-  padding: 5px;
-  text-align: center;
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
 }
-.button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    width: 25%;
-    padding: 5px;
+
+/* Center the image and position the close button */
+.imgcontainer {
     text-align: center;
-    font-size: 16px;
-    cursor: pointer;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
     float: left;
-    border: 1px solid green;
-}
-.button:hover {
-    background: green;
-}
-td {
-    border: 1px solid black;
+    padding-top: 16px;
 }
 
-tr:hover { 
-	background: yellow; 
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
 }
 
-.header {
-  padding: 0px 0px;
-  background: #555;
-  color: #f1f1f1;
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
 }
 
-.content {
-  padding: 10px;
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
 }
 
 .sticky {
@@ -52,28 +121,108 @@ tr:hover {
   width: 100%;
 }
 
-.sticky + .content {
-  padding-top: 50px;
+
+.navbar {
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+.navbar a {
+   	float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    overflow: hidden;
+    position: sticky;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    position: sticky;
+    padding: 10px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    float:left;
+    position:fixed;
+    background-color: #f9f9f9;
+    min-width: 72px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 0px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+td {
+    border: 1px solid black;
+}
+
+tr:hover {
+    background-color: red;
+}
+tr:first-child:hover {
+    background-color: white;
+}
+
 </style>
 </head>
 <body>
 
-<div class="top-container">
-  <h1>Current Affixes</h1>
+<div class="navbar" id ="navbar">
+	<a href ="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
+
+  	<a href="index.html">Home</a>
+  	<a href="rankings.html">Rankings</a>
+  	<a href ="affixes.html">Affixes</a>
+  	<div class="dropdown">
+    <button class="dropbtn">NYI 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">NYI</a>
+      <a href="#">NYI</a>
+      <a href="#">NYI</a>
+    </div>
+  </div> 
 </div>
 
-<div class="header" id="myHeader">
-	<a href="index.html"><button class = "button" id="home">Home</button></a>
-    	<a href="rankings.html"><button class = "button" id="rankings">Rankings</button></a>
-    	<a href ="affixes.html"><button class = "button" id="affixes">Affixes</button></a>
-    	<a href="#"><button class = "button" id="dungeons">NYI</button></a>
-</div>
+</body>
 
 <script>
 window.onscroll = function() {myFunction()};
 
-var header = document.getElementById("myHeader");
+var header = document.getElementById("navbar");
 var sticky = header.offsetTop;
 
 function myFunction() {
@@ -85,8 +234,51 @@ function myFunction() {
 }
 </script>
 
+<body>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="forgotpass.html">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
 </body>
-<br><br>
+
+
+<br><br><br><br>
 <body onload = "updateClock(); loadTable()">
 <img style = "display:inline" id="pone" width = "50" height = "50" border ="2"> 
 <p style ="font-size:40px; text-align:center; display:inline; vertical-align:top" id="hone"> </p> 
