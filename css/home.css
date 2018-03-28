@@ -176,14 +176,3 @@ span.psw {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-td {
-    border: 1px solid black;
-}
-
-tr:hover {
-    background-color: red;
-}
-tr:first-child:hover {
-    background-color: white;
-}
