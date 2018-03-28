@@ -1,16 +1,97 @@
 <!DOCTYPE html>
 <html>
- 	
+ 	<head>
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.top-container {
+  background-color: #f1f1f1;
+  padding: 5px;
+  text-align: center;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    width: 25%;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+    border: 1px solid green;
+}
+.button:hover {
+    background: green;
+}
+
+.button:selected {
+	border: none;
+}
+
+.header {
+  padding: 0px 0px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 10px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 50px;
+}
+</style>
+</head>
+<body>
+
+<div class="top-container">
+  <h1>Rankings</h1>
+</div>
+
+<div class="header" id="myHeader">
+	<a href="index.html"><button class = "button" id="home">Home</button></a>
+    <a href="rankings.html"><button class = "button" id="rankings">Page 2</button></a>
+    <a href ="affixes.html"><button class = "button" id="affixes">Page 3</button></a>
+    <a href="#"><button class = "button" id="dungeons">Page 4</button></a>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
   <body onload ="colorednames(); makeboldnames(); initialpage(); updateoptions();">
    <form id = "mainbar">
    <br><br>
-   <select onchange = "updateoptions();" id = "sstype" name = "stype" style="background-color: #3a3a3a; color:white; width: 13%; position:fixed; left:15%">
+   <select onchange = "updateoptions();" id = "sstype" name = "stype" style="background-color: #3a3a3a; color:white; width: 18%; position:fixed; left:5%">
      <option value= "metric" style = "display:none" selected = "selected">Metric</option>
      <option value="dps">Damage Done</option>
      <option value="hps">Healing Done</option>
    </select>
 
-   <select onchange = "updateoptions();" id = "sdifficulty" name="difficulty" style="background-color: #3a3a3a; color:white; width: 9%; position:absolute; left:28%">
+   <select onchange = "updateoptions();" id = "sdifficulty" name="difficulty" style="background-color: #3a3a3a; color:white; width: 12%; position:absolute; left:23%">
      <option value="Difficulty" style = "display: none" selected = "selected">Difficulty</option>
      <option value="n">Normal</option>
      <option value="h">Heroic</option>
@@ -18,7 +99,7 @@
      <option value="mplus">Mythic +</option>
    </select>
    
-   <select onchange = "updateoptions();" id = "sboss" name="boss" style="background-color: #3a3a3a; color:white; width: 16%; position:absolute;left:37%">
+   <select onchange = "updateoptions();" id = "sboss" name="boss" style="background-color: #3a3a3a; color:white; width: 23%; position:absolute;left:35%">
      <option value="na" style = 'display:none' selected = "selected">Dungeon</option>
      <option value="cos">Court of Stars</option>
      <option value="arc">Arcway</option>
@@ -31,7 +112,7 @@
      <option value="eoa">Eye of Azshara</option>
    </select>
    
-   <select onchange = "updateoptions();" id = "sregion" name="Region" style="background-color: #3a3a3a;color:white; width: 14%; position:absolute;left:53%">
+   <select onchange = "updateoptions();" id = "sregion" name="Region" style="background-color: #3a3a3a;color:white; width: 20%; position:absolute;left:58%">
      <option value="region" style = "display:none" selected = "selected">Region</option>
      <option value="all">All Regions</option>
      <option value="usoce">US and Oceanic</option>
@@ -42,7 +123,7 @@
      
     </select>
   
-    <select onchange = "updateoptions();" id = "sclass" name="Class" style="background-color: #3a3a3a;color:white; width: 13%; position:absolute;left:67%">
+    <select onchange = "updateoptions();" id = "sclass" name="Class" style="background-color: #3a3a3a;color:white; width: 17%; position:absolute;left:78%">
     	<optgroup label = "All Classes" style="text-color: #000000">
      		<option value="All Classes" selected = "selected">All Classes</option> <!-- original selection -->
             <option value = "All Tanks">All Tanks</option>
@@ -780,4 +861,5 @@ function displayonly(difficulty, region, whichclass, classindex) {
 </script>
 
     </body>
+    
 </html>
