@@ -11,7 +11,7 @@ function myFunction() {
   }
 }
 
-var testweek = [];
+testweek = ["","",""];
 var day;
 imglink0 = "";
 imglink1 = "";
@@ -138,6 +138,7 @@ var d, h, m, s;
         		cl2 = "red";
         //tyrannical
 		}
+	}
 	if (testweek[0] != "" && testweek[1] != "") {
 		alert("this week "+thisweek[0]+" "+thisweek[1]+" "+thisweek[2]);
 			document.getElementById('hone').innerHTML = thisweek[0];
@@ -167,12 +168,9 @@ var d, h, m, s;
 		document.getElementById('pdthree').innerHTML = desc2;
 		document.getElementById('pthree').src = imglink2;
 	}
-	}
   function setweek(num) {
 	alert("setting week "+num);
-	testweek[0] = allweeks[num-1][0];
-	  testweek[1] = allweeks[num-1][1];
-	  testweek[2] = allweeks[num-1][2];
+	testweek =  [allweeks[num-1][0], allweeks[num-1][1],allweeks[num-1][2]];  
 }
   function loadTable() {
 	for (i=0;i<=11; i++) {
