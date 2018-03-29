@@ -21,6 +21,11 @@
 	<script src="rwdImageMaps.js"></script>
 <script>
 	$(document).ready(function() {
+		$('#circle circle').tooltipster({
+				restoration: 'previous'
+			});
+			$('#circle tspan').tooltipster();
+		
 			$('#custom_mouse_click').tooltipster({
 				 trigger: 'custom',
     triggerOpen: {
@@ -129,32 +134,32 @@ function myFunction() {
 	</style>
 
 <map id="map" name ="map">
-	<area id ="custom_mouse_click" title ="Rogues and Alchemists: instantly kill boss when he drinks it during the fight"coords="404,182,28" shape="circle" />
+	<area id ="custom_mouse_click" title ="Rogues and Alchemists: instantly kill boss when he drinks it during the fight" coords="404,182,28" shape="circle" />
     	<area id ="custom_mouse_click" title ="Rogues and Alchemists: instantly kill boss when he drinks it during the fight" alt="Flask of the Solemn Night" coords="338,143,403,184" shape="rect" />
 	<area id ="custom_mouse_click" alt="Arcane Power Conduit" title="Engineers, Gnomes, Goblins: deactivate all Guardian Constructs in the dungeon"  coords="337,322,27" shape="circle">
-    <area class ="tooltip" alt="Wounded Nightborne Civilian" title="Healers, Tailors, players with First Aid: distract a mini-boss" coords="553,491,20" shape="circle">
-    <area class ="tooltip" alt="Dicarded Junk" title="Hunters and Blacksmiths: distract a mini-boss and instantly kill it (when stepped on)"  coords="726,373,26" shape="circle">
-    <area class ="tooltip" alt="Bazar Goods" title="Rogues, Warriors, and Leatherworkers: distract a mini-boss"  coords="516,467,22" shape="circle">
-    <area class ="tooltip" alt="Fel Orb" title="Demon Hunters and Warlocks: +10% crit chance"  coords="532,386,25" shape="circle">
-    <area class ="tooltip" alt="Fel Orb" title="Demon Hunters and Warlocks: +10% crit chance" coords="466,345,529,382" shape="rect">
-    <area class ="tooltip" alt="Bazar Goods" title="Rogues, Warriors, and Leatherworkers: distract a mini-boss"  coords="422,430,516,468" shape="rect">
-    <area class ="tooltip" alt="Discarded Junk" title="Hunters and Blacksmiths: distract a mini-boss and instantly kill it (when stepped on)"  coords="736,337,797,376" shape="rect">
-    <area class ="tooltip" alt="Wounded Nightborne Civilian" title="Healers, Tailors, players with First Aid: distract a mini-boss"  coords="456,491,557,528" shape="rect">
-    <area class ="tooltip" alt="Arcane Power Conduit" title="Engineers, Gnomes, Goblins: deactivate all Guardian Constructs in the dungeon"  coords="229,330,339,366" shape="rect">
-    <area class ="tooltip" alt="Lifesized Nightborne Statue" title="Miners and Jewelcrafters: distract a mini-boss"  coords="592,475,18" shape="circle">
-    <area class ="tooltip" alt="Lifesized Nightborne Statue" title="Miners and Jewelcrafters: distract a mini-boss"  coords="603,453,666,487" shape="rect">
-    <area class ="tooltip" alt="Infernal Tome" title="Priests and Paladins: +10% damage reduction"  coords="614,507,14" shape="circle">
-    <area class ="tooltip" alt="Infernal Tome" title="Priests and Paladins: +10% damage reduction"  coords="617,507,680,545" shape="rect">
-    <area class ="tooltip" alt="Magic Lantern" title="Mages, Enchanters, Blood Elf, and Night Elf: +10% damage dealt"  coords="664,349,16" shape="circle">
-    <area class ="tooltip" alt="Magic Lantern" title="Mages, Enchanters, Blood Elf, and Night Elf: +10% damage dealt"  coords="581,320,655,391" shape="rect">
-    <area class ="tooltip" alt="Nightshade Refreshments" title="Cooks at 800 skill level and Pandaren: 25% max hp"  coords="663,410,20" shape="circle">
-    <area class ="tooltip" alt="Nightshade Refreshments" title="Cooks at 800 skill level and Pandaren: 25% max hp"  coords="664,406,728,439" shape="rect">
-    <area class ="tooltip" alt="Starlight Rose Brew" title="Death Knights and Monks: increased regen for health and mana"  coords="673,321,15" shape="circle">
-    <area class ="tooltip" alt="Starlight Rose Brew" title="Death Knights and Monks: increased regen for health and mana" coords="672,280,745,322" shape="rect">
-    <area class ="tooltip" alt="Umbral Bloom" title="+10% Haste"  coords="589,438,17" shape="circle">
-    <area class ="tooltip" alt="Umbral Bloom" title="+10% Haste"  coords="562,404,631,437" shape="rect">
-    <area class ="tooltip" alt="Waterlogged Scroll" title="Shamans, Skinners, & Scribes: +30% movement speed"  coords="619,301,16" shape="circle">
-    <area class ="tooltip" alt="Waterlogged Scroll" title="Shamans, Skinners, & Scribes: +30% movement speed"  coords="513,257,626,299" shape="rect">
+    <area id ="custom_mouse_click" alt="Wounded Nightborne Civilian" title="Healers, Tailors, players with First Aid: distract a mini-boss" coords="553,491,20" shape="circle">
+    <area id ="custom_mouse_click" alt="Dicarded Junk" title="Hunters and Blacksmiths: distract a mini-boss and instantly kill it (when stepped on)"  coords="726,373,26" shape="circle">
+    <area id ="custom_mouse_click" alt="Bazar Goods" title="Rogues, Warriors, and Leatherworkers: distract a mini-boss"  coords="516,467,22" shape="circle">
+    <area id ="custom_mouse_click" alt="Fel Orb" title="Demon Hunters and Warlocks: +10% crit chance"  coords="532,386,25" shape="circle">
+    <area id ="custom_mouse_click" alt="Fel Orb" title="Demon Hunters and Warlocks: +10% crit chance" coords="466,345,529,382" shape="rect">
+    <area id ="custom_mouse_click" alt="Bazar Goods" title="Rogues, Warriors, and Leatherworkers: distract a mini-boss"  coords="422,430,516,468" shape="rect">
+    <area id ="custom_mouse_click" alt="Discarded Junk" title="Hunters and Blacksmiths: distract a mini-boss and instantly kill it (when stepped on)"  coords="736,337,797,376" shape="rect">
+    <area id ="custom_mouse_click" alt="Wounded Nightborne Civilian" title="Healers, Tailors, players with First Aid: distract a mini-boss"  coords="456,491,557,528" shape="rect">
+    <area id ="custom_mouse_click" alt="Arcane Power Conduit" title="Engineers, Gnomes, Goblins: deactivate all Guardian Constructs in the dungeon"  coords="229,330,339,366" shape="rect">
+    <area id ="custom_mouse_click" alt="Lifesized Nightborne Statue" title="Miners and Jewelcrafters: distract a mini-boss"  coords="592,475,18" shape="circle">
+    <area id ="custom_mouse_click" alt="Lifesized Nightborne Statue" title="Miners and Jewelcrafters: distract a mini-boss"  coords="603,453,666,487" shape="rect">
+    <area id ="custom_mouse_click" alt="Infernal Tome" title="Priests and Paladins: +10% damage reduction"  coords="614,507,14" shape="circle">
+    <area id ="custom_mouse_click" alt="Infernal Tome" title="Priests and Paladins: +10% damage reduction"  coords="617,507,680,545" shape="rect">
+    <area id ="custom_mouse_click" alt="Magic Lantern" title="Mages, Enchanters, Blood Elf, and Night Elf: +10% damage dealt"  coords="664,349,16" shape="circle">
+    <area id ="custom_mouse_click" alt="Magic Lantern" title="Mages, Enchanters, Blood Elf, and Night Elf: +10% damage dealt"  coords="581,320,655,391" shape="rect">
+    <area id ="custom_mouse_click" alt="Nightshade Refreshments" title="Cooks at 800 skill level and Pandaren: 25% max hp"  coords="663,410,20" shape="circle">
+    <area id ="custom_mouse_click" alt="Nightshade Refreshments" title="Cooks at 800 skill level and Pandaren: 25% max hp"  coords="664,406,728,439" shape="rect">
+    <area id ="custom_mouse_click" alt="Starlight Rose Brew" title="Death Knights and Monks: increased regen for health and mana"  coords="673,321,15" shape="circle">
+    <area id ="custom_mouse_click" alt="Starlight Rose Brew" title="Death Knights and Monks: increased regen for health and mana" coords="672,280,745,322" shape="rect">
+    <area id ="custom_mouse_click" alt="Umbral Bloom" title="+10% Haste"  coords="589,438,17" shape="circle">
+    <area id ="custom_mouse_click" alt="Umbral Bloom" title="+10% Haste"  coords="562,404,631,437" shape="rect">
+    <area id ="custom_mouse_click" alt="Waterlogged Scroll" title="Shamans, Skinners, & Scribes: +30% movement speed"  coords="619,301,16" shape="circle">
+    <area id ="custom_mouse_click" alt="Waterlogged Scroll" title="Shamans, Skinners, & Scribes: +30% movement speed"  coords="513,257,626,299" shape="rect">
 </map>
 	
 <div>
