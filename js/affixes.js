@@ -149,7 +149,7 @@ var d, h, m, s;
 		document.getElementById('pthree').src = imglink2;
 	}
   function setweek(num) {
-	  var testweek = [];
+	testweek = [];
 	alert("setting week "+num);
 	 allweeks = [["Sanguine", "Necrotic", "Fortified"], ["Bursting", "Skittish", "Tyrannical"], ["Teeming", "Quaking", "Fortified"], ["Raging", "Necrotic", "Tyrannical"], ["Bolstering", "Skittish", "Fortified"], ["Teeming", "Volcanic", "Tyrannical"], ["Sanguine", "Grevious", "Fortified"], ["Bolstering", "Explosive", "Tyrannical"], ["Bursting", "Quaking", "Fortified"],["Raging", "Volcanic", "Tyrannical"], ["Teeming", "Explosive", "Fortified"], ["Bolstering", "Grevious", "Tyrannical"]];
 	testweek[0] =  allweeks[num-1][0];
