@@ -122,10 +122,7 @@ $(document).ready(function () {
                 text: $('#map-' + elem.attr('alt')), // Attempt to grab content from #statesMap-<State> elements first
                 attr: 'alt' // No content? Grab the content from the 'alt' attribute
             },
-           	position: {
-			my: 'top left',
-			at: 'bottom right'
-		},
+           	position: { viewport: $(window) },
             show: {
                 event: 'click',
                 solo: true
@@ -154,28 +151,28 @@ $(document).ready(function () {
     	<area alt = "Flaskx" title ="Rogues and Alchemists: instantly kill boss when he drinks it during the fight" coords="338,143,403,184" shape="rect" />
 	<area alt="ArcanePowerConduit" title="Engineers, Gnomes, Goblins: deactivate all Guardian Constructs in the dungeon"  coords="337,322,27" shape="circle">
     <area  alt="WoundedNightborneCivilian" title="Healers, Tailors, players with First Aid: distract a mini-boss" coords="553,491,20" shape="circle">
-    <area  alt="Dicarded Junk" title="Hunters and Blacksmiths: distract a mini-boss and instantly kill it (when stepped on)"  coords="726,373,26" shape="circle">
-    <area alt="Bazar Goods" title="Rogues, Warriors, and Leatherworkers: distract a mini-boss"  coords="516,467,22" shape="circle">
-    <area  alt="Fel Orb" title="Demon Hunters and Warlocks: +10% crit chance"  coords="532,386,25" shape="circle">
-    <area alt="Fel Orb" title="Demon Hunters and Warlocks: +10% crit chance" coords="466,345,529,382" shape="rect">
-    <area alt="Bazar Goods" title="Rogues, Warriors, and Leatherworkers: distract a mini-boss"  coords="422,430,516,468" shape="rect">
-    <area  alt="Discarded Junk" title="Hunters and Blacksmiths: distract a mini-boss and instantly kill it (when stepped on)"  coords="736,337,797,376" shape="rect">
+    <area  alt="DicardedJunk" title="Hunters and Blacksmiths: distract a mini-boss and instantly kill it (when stepped on)"  coords="726,373,26" shape="circle">
+    <area alt="BazarGoods" title="Rogues, Warriors, and Leatherworkers: distract a mini-boss"  coords="516,467,22" shape="circle">
+    <area  alt="FelOrb" title="Demon Hunters and Warlocks: +10% crit chance"  coords="532,386,25" shape="circle">
+    <area alt="FelOrbx" title="Demon Hunters and Warlocks: +10% crit chance" coords="466,345,529,382" shape="rect">
+    <area alt="BazarGoodsx" title="Rogues, Warriors, and Leatherworkers: distract a mini-boss"  coords="422,430,516,468" shape="rect">
+    <area  alt="DiscardedJunkx" title="Hunters and Blacksmiths: distract a mini-boss and instantly kill it (when stepped on)"  coords="736,337,797,376" shape="rect">
     <area alt="WoundedNightborneCivilianx" title="Healers, Tailors, players with First Aid: distract a mini-boss"  coords="456,491,557,528" shape="rect">
     <area  alt="ArcanePowerConduitx" title="Engineers, Gnomes, Goblins: deactivate all Guardian Constructs in the dungeon"  coords="229,330,339,366" shape="rect">
-    <area alt="Lifesized Nightborne Statue" title="Miners and Jewelcrafters: distract a mini-boss"  coords="592,475,18" shape="circle">
-    <area alt="Lifesized Nightborne Statue" title="Miners and Jewelcrafters: distract a mini-boss"  coords="603,453,666,487" shape="rect">
-    <area alt="Infernal Tome" title="Priests and Paladins: +10% damage reduction"  coords="614,507,14" shape="circle">
-    <area  alt="Infernal Tome" title="Priests and Paladins: +10% damage reduction"  coords="617,507,680,545" shape="rect">
-    <area  alt="Magic Lantern" title="Mages, Enchanters, Blood Elf, and Night Elf: +10% damage dealt"  coords="664,349,16" shape="circle">
-    <area  alt="Magic Lantern" title="Mages, Enchanters, Blood Elf, and Night Elf: +10% damage dealt"  coords="581,320,655,391" shape="rect">
-    <area  alt="Nightshade Refreshments" title="Cooks at 800 skill level and Pandaren: 25% max hp"  coords="663,410,20" shape="circle">
-    <area  alt="Nightshade Refreshments" title="Cooks at 800 skill level and Pandaren: 25% max hp"  coords="664,406,728,439" shape="rect">
-    <area alt="Starlight Rose Brew" title="Death Knights and Monks: increased regen for health and mana"  coords="673,321,15" shape="circle">
-    <area  alt="Starlight Rose Brew" title="Death Knights and Monks: increased regen for health and mana" coords="672,280,745,322" shape="rect">
-    <area  alt="Umbral Bloom" title="+10% Haste"  coords="589,438,17" shape="circle">
-    <area  alt="Umbral Bloom" title="+10% Haste"  coords="562,404,631,437" shape="rect">
-    <area  alt="Waterlogged Scroll" title="Shamans, Skinners, & Scribes: +30% movement speed"  coords="619,301,16" shape="circle">
-    <area  alt="Waterlogged Scroll" title="Shamans, Skinners, & Scribes: +30% movement speed"  coords="513,257,626,299" shape="rect">
+    <area alt="LifesizedNightborneStatue" title="Miners and Jewelcrafters: distract a mini-boss"  coords="592,475,18" shape="circle">
+    <area alt="LifesizedNightborneStatuex" title="Miners and Jewelcrafters: distract a mini-boss"  coords="603,453,666,487" shape="rect">
+    <area alt="InfernalTome" title="Priests and Paladins: +10% damage reduction"  coords="614,507,14" shape="circle">
+    <area  alt="InfernalTomex" title="Priests and Paladins: +10% damage reduction"  coords="617,507,680,545" shape="rect">
+    <area  alt="MagicLantern" title="Mages, Enchanters, Blood Elf, and Night Elf: +10% damage dealt"  coords="664,349,16" shape="circle">
+    <area  alt="MagicLanternx" title="Mages, Enchanters, Blood Elf, and Night Elf: +10% damage dealt"  coords="581,320,655,391" shape="rect">
+    <area  alt="NightshadeRefreshments" title="Cooks at 800 skill level and Pandaren: 25% max hp"  coords="663,410,20" shape="circle">
+    <area  alt="NightshadeRefreshmentsx" title="Cooks at 800 skill level and Pandaren: 25% max hp"  coords="664,406,728,439" shape="rect">
+    <area alt="StarlightRoseBrew" title="Death Knights and Monks: increased regen for health and mana"  coords="673,321,15" shape="circle">
+    <area  alt="StarlightRoseBrewx" title="Death Knights and Monks: increased regen for health and mana" coords="672,280,745,322" shape="rect">
+    <area  alt="UmbralBloom" title="+10% Haste"  coords="589,438,17" shape="circle">
+    <area  alt="UmbralBloomx" title="+10% Haste"  coords="562,404,631,437" shape="rect">
+    <area  alt="WaterloggedScroll" title="Shamans, Skinners, & Scribes: +30% movement speed"  coords="619,301,16" shape="circle">
+    <area  alt="WaterloggedScrollx" title="Shamans, Skinners, & Scribes: +30% movement speed"  coords="513,257,626,299" shape="rect">
 </map>
 	
 <div id ="map-ArcanePowerConduit" class ="tooltip-content">
@@ -198,62 +195,66 @@ $(document).ready(function () {
 <div id ="map-WoundedNightborneCivilian" class ="tooltip-content">
     <a href ="#">Healers, Tailors, players with First Aid: distract a mini-boss.</a>
 </div>
-
-<div>
-    <h3 hidden id="dj">Discarded Junk</h3>
-    <p hidden>Hunters and Blacksmiths: distract a mini-boss and instantly kill it (when stepped on).</p>
+	<div id ="map-DiscardedJunk" class ="tooltip-content">
+    <a href ="#">Hunters and Blacksmiths: distract a mini-boss and instantly kill it (when stepped on).</a>
 </div>
-
-<div>
-    <h3 hidden id="bg">Bazar Goods</h3>
-    <p hidden>Rogues, Warriors, and Leatherworkers: distract a mini-boss.</p>
+<div id ="map-DiscardedJunkx" class ="tooltip-content">
+    <a href ="#">Hunters and Blacksmiths: distract a mini-boss and instantly kill it (when stepped on).</a>
 </div>
-
-<div>
-    <h3 hidden id="fo">Fel Orb</h3>
-    <p hidden>Demon Hunters and Warlocks: +10% crit chance</p>
+	<div id ="map-BazarGoods" class ="tooltip-content">
+    <a href ="#">Rogues, Warriors, and Leatherworkers: distract a mini-boss.</a>
 </div>
-
-<div>
-    <h3 hidden id="lns">Lifesized Nightborne Statue</h3>
-    <p hidden>Miners and Jewelcrafters: distract a mini-boss.
-</p>
-
-<div>
-    <h3 hidden id="inf">Infernal Tome</h3>
-    <p hidden>Infernal Tome: Priests and Paladins: +10% damage reduction
-</p>
-
-<div>
-    <h3 hidden id="ml">Magical Lantern</h3>
-    <p hidden>Mages, Enchanters, Blood Elf, and Night Elf: +10% damage dealt
-</p>
-
-<div>
-    <h3 hidden id="nr">Nightshade Refreshments</h3>
-    <p hidden>Cooks at 800 skill level and Pandaren: 25% max hp
-</p>
-
-<div>
-    <h3 hidden id="srb">Starlight Rose Brew</h3>
-    <p hidden>Death Knights and Monks: increased regen for health and mana
-</p>
-
-<div>
-    <h3 hidden id="ub">Umbral Bloom</h3>
-    <p hidden>Druids and Herbalists: +10% Haste
-</p>
-		
-<div id = "wls" class="tooltip">
-  <span class="tooltiptext">Shamans, Skinners, & Scribes: +30% movement speed</span>
+	<div id ="map-BazarGoodsx" class ="tooltip-content">
+    <a href ="#">Rogues, Warriors, and Leatherworkers: distract a mini-boss.</a>
 </div>
-	
-<!--<div>
-    <h3 hidden id="wls">Waterlogged Scroll</h3>
-    <p hidden>Shamans, Skinners, & Scribes: +30% movement speed
-</p>-->
-
-</div></div>
+	<div id ="map-FelOrbx" class ="tooltip-content">
+    <a href ="#">Demon Hunters and Warlocks: +10% crit chance.</a>
+</div>
+	<div id ="map-FelOrb" class ="tooltip-content">
+    <a href ="#">Demon Hunters and Warlocks: +10% crit chance.</a>
+</div>
+	<div id ="map-LifesizedNightborneStatue" class ="tooltip-content">
+    <a href ="#">Miners and Jewelcrafters: distract a mini-boss.</a>
+</div>
+	<div id ="map-LifesizedNightborneStatuex" class ="tooltip-content">
+    <a href ="#">Miners and Jewelcrafters: distract a mini-boss.</a>
+</div>
+	<div id ="map-InfernalTome" class ="tooltip-content">
+    <a href ="#">Priests and Paladins: +10% damage reduction.</a>
+</div>
+	<div id ="map-InfernalTomex" class ="tooltip-content">
+    <a href ="#">Priests and Paladins: +10% damage reduction.</a>
+</div>
+	<div id ="map-MagicalLanternx" class ="tooltip-content">
+    <a href ="#">Mages, Enchanters, Blood Elf, and Night Elf: +10% damage dealt.</a>
+</div>
+	<div id ="map-MagicalLantern" class ="tooltip-content">
+    <a href ="#">Mages, Enchanters, Blood Elf, and Night Elf: +10% damage dealt.</a>
+</div>
+	<div id ="map-NightshadeRefreshmentsx" class ="tooltip-content">
+    <a href ="#">Cooks at 800 skill level and Pandaren: 25% max hp.</a>
+</div>
+	<div id ="map-NightshadeRefreshments" class ="tooltip-content">
+    <a href ="#">Cooks at 800 skill level and Pandaren: 25% max hp.</a>
+</div>
+	<div id ="map-StarlightRoseBrew" class ="tooltip-content">
+    <a href ="#">Death Knights and Monks: increased regen for health and mana.</a>
+</div>
+	<div id ="map-StarlightRoseBrewx" class ="tooltip-content">
+    <a href ="#">Death Knights and Monks: increased regen for health and mana.</a>
+</div>
+	<div id ="map-UmbralBloom" class ="tooltip-content">
+    <a href ="#">Druids and Herbalists: +10% Haste.</a>
+</div>
+	<div id ="map-UmbralBloomx" class ="tooltip-content">
+    <a href ="#">Druids and Herbalists: +10% Haste.</a>
+</div>
+	<div id ="map-WaterloggedScroll" class ="tooltip-content">
+    <a href ="#">Shamans, Skinners, & Scribes: +30% movement speed.</a>
+</div>
+	<div id ="map-WaterloggedScrollx" class ="tooltip-content">
+    <a href ="#">Shamans, Skinners, & Scribes: +30% movement speed.</a>
+</div>	
 
 <script>
 // Get the modal
