@@ -61,6 +61,7 @@ var d, h, m, s;
     		allweeks = [["Sanguine", "Necrotic", "Fortified"], ["Bursting", "Skittish", "Tyrannical"], ["Teeming", "Quaking", "Fortified"], ["Raging", "Necrotic", "Tyrannical"], ["Bolstering", "Skittish", "Fortified"], ["Teeming", "Volcanic", "Tyrannical"], ["Sanguine", "Grevious", "Fortified"], ["Bolstering", "Explosive", "Tyrannical"], ["Bursting", "Quaking", "Fortified"],["Raging", "Volcanic", "Tyrannical"], ["Teeming", "Explosive", "Fortified"], ["Bolstering", "Grevious", "Tyrannical"]];
 
 		thisweek = allweeks[incweek];
+		alert(thisweek[0]);
 		nextweek = allweeks[incweek+1];
 		twoweeks = allweeks[incweek+2];
 
@@ -137,7 +138,6 @@ var d, h, m, s;
         		cl2 = "red";
         //tyrannical
 		}
-	}
 	if (testweek[0] != "" && testweek[1] != "") {
 		alert("this week "+thisweek[0]+" "+thisweek[1]+" "+thisweek[2]);
 			document.getElementById('hone').innerHTML = thisweek[0];
@@ -166,7 +166,8 @@ var d, h, m, s;
 		document.getElementById('hthree').style.color = cl2;
 		document.getElementById('pdthree').innerHTML = desc2;
 		document.getElementById('pthree').src = imglink2;
-	}  
+	}
+	}
   function setweek(num) {
 	alert("setting week "+num);
 	testweek[0] = allweeks[num-1][0];
