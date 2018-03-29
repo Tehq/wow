@@ -19,29 +19,109 @@
 	<script src="js/jquery.js"></script>
 	<script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
 	<script src="rwdImageMaps.js"></script>
-<script>
-	$(document).ready(function() {
-		$('#circle circle').tooltipster({
-				restoration: 'previous'
-			});
-			$('#circle tspan').tooltipster();
-		
-			$('#custom_mouse_click').tooltipster({
-				 trigger: 'custom',
-    triggerOpen: {
-        mouseenter: true,
-        touchstart: true
-    },
-    triggerClose: {
-        click: true,
-        scroll: true,
-        tap: true
-    }
 
+<script type="text/javascript">	
+		$(document).ready(function() {
+			
+			$('.tooltip.hover').tooltipster({
+				trigger: 'hover'
 			});
-	}
+			
+			$('.tooltip.click').tooltipster({
+				trigger: 'click',
+				trackOrigin: true,
+				trackTooltip: true
+			});
+			
+			$('#custom_mouse_hover').tooltipster({
+				trigger: 'custom',
+				triggerOpen: {
+					mouseenter: true
+				},
+				triggerClose: {
+					mouseleave: true
+				}
+			});
+			$('#custom_mouse_click').tooltipster({
+				trigger: 'custom',
+				triggerOpen: {
+					click: true
+				},
+				triggerClose: {
+					click: true
+				}
+			});
+			$('#custom_touch_hover').tooltipster({
+				delayTouch: 0,
+				trigger: 'custom',
+				triggerOpen: {
+					touchstart: true
+				},
+				triggerClose: {
+					touchleave: true
+				}
+			});
+			$('#custom_touch_hoverinteractive').tooltipster({
+				interactive: true,
+				trigger: 'custom',
+				triggerOpen: {
+					touchstart: true
+				},
+				triggerClose: {
+					touchleave: true
+				}
+			});
+			$('#custom_touch_tap').tooltipster({
+				trigger: 'custom',
+				triggerOpen: {
+					tap: true
+				},
+				triggerClose: {
+					tap: true
+				}
+			});
+			$('#custom_touch_tapinteractive').tooltipster({
+				interactive: true,
+				trigger: 'custom',
+				triggerOpen: {
+					tap: true
+				},
+				triggerClose: {
+					tap: true
+				}
+			});
+			$('#custom_touch_clicktapscroll').tooltipster({
+				trigger: 'custom',
+				triggerOpen: {
+					click: true,
+					tap: true
+				},
+				triggerClose: {
+					scroll: true
+				}
+			});
+			
+			$('.inline').tooltipster({
+				content: 'Second',
+				multiple: true,
+				position: 'right'
+			});
+			$('.inline').tooltipster({
+				content: 'Third',
+				multiple: true,
+				position: 'bottom'
+			});
+			$('.inline').tooltipster({
+				content: 'Fourth',
+				multiple: true,
+				position: 'left'
+			});
+		});
+	</script>
 	
-</script>
+	
+	
+	
 	</head>
 <body>
 <div class="navbar" id ="navbar">
