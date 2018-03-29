@@ -221,3 +221,11 @@ span.psw {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.map
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
