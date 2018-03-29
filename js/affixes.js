@@ -85,7 +85,7 @@ var d, h, m, s;
         		cl0 = "orange";
         //teeming
 		} else if (thisweek[0] == "Bursting"|| testweek[0] == "Bursting") {
-        		imglink0 = "../img/bursting.jpg"; 
+        		imglink0 = "../../img/bursting.jpg"; 
         		desc0 = "• When slain, non-boss enemies explode, causing all players to suffer 10% of their max health in damage over 4 sec. This effect stacks"
         		cl0 = "orange";
         //bursting
