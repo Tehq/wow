@@ -150,12 +150,10 @@ var d, h, m, s;
 	}
   function setweek(num) {
 	testweek = [];
-	alert("setting week "+num);
 	 allweeks = [["Sanguine", "Necrotic", "Fortified"], ["Bursting", "Skittish", "Tyrannical"], ["Teeming", "Quaking", "Fortified"], ["Raging", "Necrotic", "Tyrannical"], ["Bolstering", "Skittish", "Fortified"], ["Teeming", "Volcanic", "Tyrannical"], ["Sanguine", "Grevious", "Fortified"], ["Bolstering", "Explosive", "Tyrannical"], ["Bursting", "Quaking", "Fortified"],["Raging", "Volcanic", "Tyrannical"], ["Teeming", "Explosive", "Fortified"], ["Bolstering", "Grevious", "Tyrannical"]];
 	testweek[0] =  allweeks[num-1][0];
 	 testweek[1] =  allweeks[num-1][1];
 	  testweek[2] =  allweeks[num-1][2];
-	  alert("test week "+testweek[0]+" "+testweek[1]+" "+testweek[2]);
 	  if (testweek[0] == "Sanguine") {
         		imglink0 = "../img/sanguine.jpg"; 
         		desc0 = "• When slain, non-boss enemies leave behind a lingering pool of ichor that heals their allies and damages players";
