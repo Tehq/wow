@@ -11,17 +11,11 @@ function myFunction() {
   }
 }
 
-testweek = thisweek;
-
-function setweek(num) {
-	alert("setting week "+num);
-	testweek = allweeks[num-1];
-}
-
+var testweek = [];
 var day;
 imglink0 = "";
-imglink1 ="";
-imglink2="";
+imglink1 = "";
+imglink2 = "";
 var desc0, desc1, desc2;
 var cl0, cl1, cl2;
 var startDateTime = new Date(2018, 2, 20, 11, 0, 0, 0);
@@ -173,7 +167,10 @@ var d, h, m, s;
 		document.getElementById('pdthree').innerHTML = desc2;
 		document.getElementById('pthree').src = imglink2;
 	}  
-  
+  function setweek(num) {
+	alert("setting week "+num);
+	testweek = allweeks[num-1];
+}
   function loadTable() {
 	for (i=0;i<=11; i++) {
         for (j=0; j<=2;j++) {
