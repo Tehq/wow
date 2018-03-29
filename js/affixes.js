@@ -143,8 +143,9 @@ var d, h, m, s;
         		cl2 = "red";
         //tyrannical
 		}
-        if (testweek[0].length = 0 && testweek[1].length = 0 && testweek[2].length = 0) {
+        //if (testweek[0].length = 0 && testweek[1].length = 0 && testweek[2].length = 0) {
 		alert(thisweek[0]+" "+thisweek[1]+" "+thisweek[2]);
+		alert(testweek[0]+" "+testweek[1]+" "+testweek[2]);
 			document.getElementById('hone').innerHTML = thisweek[0];
 			document.getElementById('hone').style.color = cl0;
 			document.getElementById('pdone').innerHTML = desc0;
@@ -157,7 +158,7 @@ var d, h, m, s;
 		document.getElementById('hthree').style.color = cl2;
 		document.getElementById('pdthree').innerHTML = desc2;
 		document.getElementById('pthree').src = imglink2;
-        } else {
+        /*} else {
 		alert(testweek[0]+" "+testweek[1]+" "+testweek[2]);
         	document.getElementById('hone').innerHTML = testweek[0];
 		document.getElementById('hone').style.color = cl0;
@@ -171,7 +172,7 @@ var d, h, m, s;
 		document.getElementById('hthree').style.color = cl2;
 		document.getElementById('pdthree').innerHTML = desc2;
 		document.getElementById('pthree').src = imglink2;
-        }
+        }*/
 	}
   
   function loadTable() {
