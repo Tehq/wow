@@ -108,8 +108,12 @@ function myFunction() {
 	</style>
 
 <map name="cos">
-    <area target="" onClick = "alert('test')" alt="Flask of the Solemn Night" title="Flask of the Solemn Night" href="#flask" coords="404,182,28" shape="circle">
-    <area target="" alt="Arcane Power Conduit" title="Arcane Power Conduit" href="#apc" coords="337,322,27" shape="circle">
+    <div class ="popup" onclick="popupMap()">
+	<area target=""  alt="Flask of the Solemn Night" title="Flask of the Solemn Night" href="#" coords="404,182,28" shape="circle">
+    	<area target=""  alt="Flask of the Solemn Night" title="Flask of the Solemn Night" href="#" coords="338,143,403,184" shape="rect">
+	<span class="popuptext" id="myPopup">Rogues and Alchemists: instantly kill boss when he drinks it during the fight</span>
+</div>
+	<area target="" alt="Arcane Power Conduit" title="Arcane Power Conduit" href="#apc" coords="337,322,27" shape="circle">
     <area target="" alt="Wounded Nightborne Civilian" title="Wounded Nightborne Civilian" href="#wnc" coords="553,491,20" shape="circle">
     <area target="" alt="Dicarded Junk" title="Dicarded Junk" href="#dj" coords="726,373,26" shape="circle">
     <area target="" alt="Bazar Goods" title="Bazar Goods" href="#bg" coords="516,467,22" shape="circle">
@@ -119,7 +123,6 @@ function myFunction() {
     <area target="" alt="Discarded Junk" title="Discarded Junk" href="#dj" coords="736,337,797,376" shape="rect">
     <area target="" alt="Wounded Nightborne Civilian" title="Wounded Nightborne Civilian" href="#wnc" coords="456,491,557,528" shape="rect">
     <area target="" alt="Arcane Power Conduit" title="Arcane Power Conduit" href="#apc" coords="229,330,339,366" shape="rect">
-    <area target="" onClick = "alert('test')" alt="Flask of the Solemn Night" title="Flask of the Solemn Night" href="#flask" coords="338,143,403,184" shape="rect">
     <area target="" alt="Lifesized Nightborne Statue" title="Lifesized Nightborne Statue" href="#lns" coords="592,475,18" shape="circle">
     <area target="" alt="Lifesized Nightborne Statue" title="Lifesized Nightborne Statue" href="#lns" coords="603,453,666,487" shape="rect">
     <area target="" alt="Infernal Tome" title="Infernal Tome" href="#inf" coords="614,507,14" shape="circle">
@@ -135,6 +138,15 @@ function myFunction() {
     <area target="" alt="Waterlogged Scroll" title="Waterlogged Scroll" href="#wls" coords="619,301,16" shape="circle">
     <area target="" alt="Waterlogged Scroll" title="Waterlogged Scroll" href="#wls" coords="513,257,626,299" shape="rect">
 </map>
+	
+<script>
+// When the user clicks on div, open the popup
+function popupMap() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+</script>
+	
 <div>
     <h3 hidden id="apc">Arcane Power Conduit</h3>
     <p hidden>Engineers, Gnomes, Goblins: deactivate all Guardian Constructs in the dungeon</p>
