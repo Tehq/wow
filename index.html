@@ -122,9 +122,9 @@ $(document).ready(function () {
                 text: $('#map-' + elem.attr('alt')), // Attempt to grab content from #statesMap-<State> elements first
                 attr: 'alt' // No content? Grab the content from the 'alt' attribute
             },
-            position: {
-                viewport: image
-            },
+           	position: {
+			viewport: $(window) 
+		},
             show: {
                 event: 'click',
                 solo: true
