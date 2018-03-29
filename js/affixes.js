@@ -159,7 +159,7 @@ function setMisc(array) {
 		document.getElementById('nw2').src = imglink1;
 		document.getElementById('nw3').src = imglink2;
 		
-		setMisc(thisweek);
+		setMisc(twoweeks);
 		
 		document.getElementById('an1').src = imglink0;
 		document.getElementById('an2').src = imglink1;
