@@ -23,6 +23,7 @@
   	<a href="index.html">Home</a>
   	<a href="rankings.html">Rankings</a>
   	<a href ="affixes.html">Affixes</a>
+    <a href ="affixes.html">This week<br><img src = imglink0>  <img src = imglink1>  <img src =imglink2></a>
   	<!--<div class="dropdown">
     <button class="dropbtn">NYI 
       <i class="fa fa-caret-down"></i>
@@ -75,7 +76,6 @@ window.onclick = function(event) {
 }
 </script>
 
-
 <br><br><br><br>
 <body onload = "updateClock(); loadTable()">
 <img style = "display:inline" id="pone" width = "50" height = "50" border ="2"> 
@@ -92,68 +92,67 @@ window.onclick = function(event) {
     	<th colspan = 3>Upcoming Affixes</th>
   	</tr>
   	<tr>
-    	<td id ="week00"></td>
-        <td id ="week01"></td>
-        <td id ="week02"></td>
+    	<td onclick = "setweek(1)" id ="week00"></td>
+        <td onclick = "setweek(1)" id ="week01"></td>
+        <td onclick = "setweek(1)" id ="week02"></td>
   	</tr>
   	<tr>
-    	<td id ="week10"></td>
-        <td id ="week11"></td>
-        <td id ="week12"></td>
+    	<td onclick = "setweek(2)" id ="week10"></td>
+        <td onclick = "setweek(2)"id ="week11"></td>
+        <td onclick = "setweek(2)"id ="week12"></td>
   	</tr>
   	<tr>
-    	<td id ="week20"></td>
-        <td id ="week21"></td>
-        <td id ="week22"></td>
+    	<td onclick = "setweek(3)" id ="week20"></td>
+        <td onclick = "setweek(3)"id ="week21"></td>
+        <td onclick = "setweek(3)"id ="week22"></td>
     </tr>
     <tr>
-    	<td id ="week30"></td>
-        <td id ="week31"></td>
-        <td id ="week32"></td>
+    	<td onclick = "setweek(4)"id ="week30"></td>
+        <td onclick = "setweek(4)"id ="week31"></td>
+        <td onclick = "setweek(4)"id ="week32"></td>
     </tr>
     <tr>
-    	<td id ="week40"></td>
-        <td id ="week41"></td>
-        <td id ="week42"></td>
+    	<td onclick = "setweek(5)"id ="week40"></td>
+        <td onclick = "setweek(5)"id ="week41"></td>
+        <td onclick = "setweek(5)"id ="week42"></td>
     </tr>
     <tr>
-    	<td id ="week50"></td>
-        <td id ="week51"></td>
-        <td id ="week52"></td>
+    	<td onclick = "setweek(6)"id ="week50"></td>
+        <td onclick = "setweek(6)"id ="week51"></td>
+        <td onclick = "setweek(6)"id ="week52"></td>
     </tr>
     <tr>
-    	<td id ="week60"></td>
-        <td id ="week61"></td>
-        <td id ="week62"></td>
+    	<td onclick = "setweek(7)"id ="week60"></td>
+        <td onclick = "setweek(7)"id ="week61"></td>
+        <td onclick = "setweek(7)"id ="week62"></td>
     </tr>
     <tr>
-    	<td id ="week70"></td>
-        <td id ="week71"></td>
-        <td id ="week72"></td>
+    	<td onclick = "setweek(8)"id ="week70"></td>
+        <td onclick = "setweek(8)"id ="week71"></td>
+        <td onclick = "setweek(8)"id ="week72"></td>
     </tr>
     <tr>
-    	<td id ="week80"></td>
-        <td id ="week81"></td>
-        <td id ="week82"></td>
+    	<td onclick = "setweek(9)"id ="week80"></td>
+        <td onclick = "setweek(9)"id ="week81"></td>
+        <td onclick = "setweek(9)"id ="week82"></td>
     </tr>
     <tr>
-    	<td id ="week90"></td>
-        <td id ="week91"></td>
-        <td id ="week92"></td>
+    	<td onclick = "setweek(10)"id ="week90"></td>
+        <td onclick = "setweek(10)"id ="week91"></td>
+        <td onclick = "setweek(10)"id ="week92"></td>
     </tr>
     <tr>
-    	<td id ="week100"></td>
-        <td id ="week101"></td>
-        <td id ="week102"></td>
+    	<td onclick = "setweek(11)"id ="week100"></td>
+        <td onclick = "setweek(11)"id ="week101"></td>
+        <td onclick = "setweek(11)"id ="week102"></td>
     </tr>
     <tr>
-    	<td id ="week110"></td>
-        <td id ="week111"></td>
-        <td id ="week112"></td>
+    	<td onclick = "setweek(12)"id ="week110"></td>
+        <td onclick = "setweek(12)"id ="week111"></td>
+        <td onclick = "setweek(12)"id ="week112"></td>
     </tr>
 </table>
 </body>
 	
 	<script src="js/affixes.js"></script>
-
 </html>
