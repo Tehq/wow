@@ -12,6 +12,7 @@ function myFunction() {
 }
 
 testweek = ["","",""];
+thisweek = [];
 var day;
 imglink0 = "";
 imglink1 = "";
@@ -140,7 +141,7 @@ var d, h, m, s;
 		}
 	}
 	if (testweek[0] != "" && testweek[1] != "") {
-		alert("this week "+thisweek[0]+" "+thisweek[1]+" "+thisweek[2]);
+		//alert("this week "+thisweek[0]+" "+thisweek[1]+" "+thisweek[2]);
 			document.getElementById('hone').innerHTML = thisweek[0];
 			document.getElementById('hone').style.color = cl0;
 			document.getElementById('pdone').innerHTML = desc0;
