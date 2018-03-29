@@ -62,7 +62,6 @@ var d, h, m, s;
     		allweeks = [["Sanguine", "Necrotic", "Fortified"], ["Bursting", "Skittish", "Tyrannical"], ["Teeming", "Quaking", "Fortified"], ["Raging", "Necrotic", "Tyrannical"], ["Bolstering", "Skittish", "Fortified"], ["Teeming", "Volcanic", "Tyrannical"], ["Sanguine", "Grevious", "Fortified"], ["Bolstering", "Explosive", "Tyrannical"], ["Bursting", "Quaking", "Fortified"],["Raging", "Volcanic", "Tyrannical"], ["Teeming", "Explosive", "Fortified"], ["Bolstering", "Grevious", "Tyrannical"]];
 
 		thisweek = allweeks[incweek];
-		alert(thisweek[0]);
 		nextweek = allweeks[incweek+1];
 		twoweeks = allweeks[incweek+2];
 
@@ -155,7 +154,13 @@ var d, h, m, s;
 		document.getElementById('pdthree').innerHTML = desc2;
 		document.getElementById('pthree').src = imglink2;
 	} else {
-		alert("test week "+testweek[0]+" "+testweek[1]+" "+testweek[2]);
+	}
+  function setweek(num) {
+	alert("setting week "+num);
+	testweek[0] =  allweeks[num-1][0];
+	 testweek[1] =  allweeks[num-1][1];
+	  testweek[2] =  allweeks[num-1][2];
+	  alert("test week "+testweek[0]+" "+testweek[1]+" "+testweek[2]);
         	document.getElementById('hone').innerHTML = testweek[0];
 		document.getElementById('hone').style.color = cl0;
 		document.getElementById('pdone').innerHTML = desc0;
@@ -168,10 +173,6 @@ var d, h, m, s;
 		document.getElementById('hthree').style.color = cl2;
 		document.getElementById('pdthree').innerHTML = desc2;
 		document.getElementById('pthree').src = imglink2;
-	}
-  function setweek(num) {
-	alert("setting week "+num);
-	testweek =  [allweeks[num-1][0], allweeks[num-1][1],allweeks[num-1][2]];  
 }
   function loadTable() {
 	for (i=0;i<=11; i++) {
