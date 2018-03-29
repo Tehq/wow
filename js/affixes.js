@@ -65,28 +65,28 @@ var d, h, m, s;
 		nextweek = allweeks[incweek+1];
 		twoweeks = allweeks[incweek+2];
 
-		if (thisweek[0] == "Sanguine" || testweek[0] == "Sanguine") {
+		if (thisweek[0] == "Sanguine") {
         		imglink0 = "../img/sanguine.jpg"; 
         		desc0 = "• When slain, non-boss enemies leave behind a lingering pool of ichor that heals their allies and damages players";
         		cl0 = "green";
         //sanguine
-		} else if (thisweek[0] == "Bolstering" || testweek[0] == "Bolstering") {
-        		imglink0 = "/img/bolstering.jpg"; 
+		} else if (thisweek[0] == "Bolstering") {
+        		imglink0 = "../img/bolstering.jpg"; 
         		desc0 = "• When any non-boss enemy dies, its death cry empowers nearby allies, increasing their maximum health and damage by 20%";
         		cl0 = "orange";
         //bolstering
-		} else if (thisweek[0] == "Raging"|| testweek[0] == "Raging") {
-       			imglink0 = "/img/raging.jpg"; 
+		} else if (thisweek[0] == "Raging") {
+       			imglink0 = "../img/raging.jpg"; 
         		desc0 = "• Non-boss enemies enrage at 30% health remaining, dealing 100% increased damage until defeated"; 
         		cl0 = "orange";
         //raging
-		} else if (thisweek[0] == "Teeming"|| testweek[0] == "Teeming") {
-        		imglink0 = "/img/teeming.jpg"; 
+		} else if (thisweek[0] == "Teeming") {
+        		imglink0 = "../img/teeming.jpg"; 
         		desc0 = "• Additional non-boss enemies are present throughout the dungeon";
         		cl0 = "orange";
         //teeming
 		} else if (thisweek[0] == "Bursting"|| testweek[0] == "Bursting") {
-        		imglink0 = "../../img/bursting.jpg"; 
+        		imglink0 = "../img/bursting.jpg"; 
         		desc0 = "• When slain, non-boss enemies explode, causing all players to suffer 10% of their max health in damage over 4 sec. This effect stacks"
         		cl0 = "orange";
         //bursting
@@ -95,7 +95,7 @@ var d, h, m, s;
 // ------------------------------------------------------------------ //
 
 		if (thisweek[1] == "Necrotic" || testweek[1] == "Necrotic") {
-			imglink1 = "/img/necrotic.jpg"; 
+			imglink1 = "../img/necrotic.jpg"; 
         		desc1 = "• All enemies' melee attacks apply a stacking blight that inflicts damage over time and reduces healing received";
         		cl1 = "red";
         //necrotic
@@ -105,22 +105,22 @@ var d, h, m, s;
         		cl1 = "orange";
         //skittish
 		} else if (thisweek[1] == "Volcanic" || testweek[1] == "Volcanic") {
-        		imglink1 = "/img/volcanic.jpg"; 
+        		imglink1 = "../img/volcanic.jpg"; 
         		desc1 = "• While in combat, enemies periodically cause gouts of flame to erupt beneath the feet of distant players"; 
         		cl1 = "green";
         //volcanic
 		} else if (thisweek[1] == "Explosive" || testweek[1] == "Explosive") {
-        		imglink1 = "/img/explosive.jpg"; 
+        		imglink1 = "../img/explosive.jpg"; 
         		desc1 = "• While in combat, enemies periodically summon Explosive Orbs that will detonate if not destroyed";
         		cl1 = "orange";
         //explosive
 		} else if (thisweek[1] == "Quaking" || testweek[1] == "Quaking") {
-        		imglink1 = "/img/quaking.jpg"; 
+        		imglink1 = "../img/quaking.jpg"; 
         		desc1 = "• Periodically, all players emit a shockwave, inflicting damage and interrupting nearby allies";
         		cl1 = "green";
         //quaking
 		} else if (thisweek[1] == "Grevious" || testweek[1] == "Grevious") {
-        		imglink1 = "/img/grevious.jpg"; 
+        		imglink1 = "../img/grevious.jpg"; 
         		desc1 = "• When injured below 90% health, players will suffer increasing damage over time until healed above 90% health";
         		cl1 = "orange";
 		}
@@ -128,7 +128,7 @@ var d, h, m, s;
 // ------------------------------------------------------------------ //
 
 		if (thisweek[2] == "Fortified" || testweek[2] == "Fortified") {
-        		imglink2 = "/img/fortified.jpg"; 
+        		imglink2 = "../img/fortified.jpg"; 
         		desc2 = "• Non-boss enemies have 20% more health and inflict up to 30% increased damage";
         		cl2 = "orange";
         //fortified
@@ -139,7 +139,6 @@ var d, h, m, s;
         //tyrannical
 		}
 	}
-	if (testweek[0] != "" && testweek[1] != "") {
 		//alert("this week "+thisweek[0]+" "+thisweek[1]+" "+thisweek[2]);
 			document.getElementById('hone').innerHTML = thisweek[0];
 			document.getElementById('hone').style.color = cl0;
@@ -153,8 +152,6 @@ var d, h, m, s;
 		document.getElementById('hthree').style.color = cl2;
 		document.getElementById('pdthree').innerHTML = desc2;
 		document.getElementById('pthree').src = imglink2;
-	} else {
-	}
   function setweek(num) {
 	alert("setting week "+num);
 	 allweeks = [["Sanguine", "Necrotic", "Fortified"], ["Bursting", "Skittish", "Tyrannical"], ["Teeming", "Quaking", "Fortified"], ["Raging", "Necrotic", "Tyrannical"], ["Bolstering", "Skittish", "Fortified"], ["Teeming", "Volcanic", "Tyrannical"], ["Sanguine", "Grevious", "Fortified"], ["Bolstering", "Explosive", "Tyrannical"], ["Bursting", "Quaking", "Fortified"],["Raging", "Volcanic", "Tyrannical"], ["Teeming", "Explosive", "Fortified"], ["Bolstering", "Grevious", "Tyrannical"]];
