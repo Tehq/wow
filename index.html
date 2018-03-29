@@ -19,7 +19,11 @@
 	<script src="js/jquery.js"></script>
 	<script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
 	<script src="rwdImageMaps.js"></script>
-
+<script>
+        $(document).ready(function() {
+            $('.tooltip').tooltipster();
+        });
+    </script>
 	</head>
 <body>
 <div class="navbar" id ="navbar">
@@ -112,10 +116,9 @@ function myFunction() {
 	</style>
 
 <map name="cos">
-    <div class ="popup" onclick="popupMap()">
+    <div class ="tooltip" title ="Rogues and Alchemists: instantly kill boss when he drinks it during the fight">
 	<area target=""  alt="Flask of the Solemn Night" title="Flask of the Solemn Night" href="#" coords="404,182,28" shape="circle">
     	<area target=""  alt="Flask of the Solemn Night" title="Flask of the Solemn Night" href="#" coords="338,143,403,184" shape="rect">
-	<span class="popuptext" id="myPopup">Rogues and Alchemists: instantly kill boss when he drinks it during the fight</span>
 </div>
 	<area target="" alt="Arcane Power Conduit" title="Arcane Power Conduit" href="#apc" coords="337,322,27" shape="circle">
     <area target="" alt="Wounded Nightborne Civilian" title="Wounded Nightborne Civilian" href="#wnc" coords="553,491,20" shape="circle">
@@ -142,14 +145,6 @@ function myFunction() {
     <area target="" alt="Waterlogged Scroll" title="Waterlogged Scroll" href="#wls" coords="619,301,16" shape="circle">
     <area target="" alt="Waterlogged Scroll" title="Waterlogged Scroll" href="#wls" coords="513,257,626,299" shape="rect">
 </map>
-	
-<script>
-// When the user clicks on div, open the popup
-function popupMap() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-}
-</script>
 	
 <div>
     <h3 hidden id="apc">Arcane Power Conduit</h3>
