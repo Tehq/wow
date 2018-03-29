@@ -14,6 +14,7 @@ function myFunction() {
 testweek = [];
 
 function setweek(num) {
+	alert("setting week "+num);
 	testweek = allweeks[num-1];
 }
 
