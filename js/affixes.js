@@ -143,9 +143,8 @@ var d, h, m, s;
         		cl2 = "red";
         //tyrannical
 		}
-        //if (testweek[0].length = 0 && testweek[1].length = 0 && testweek[2].length = 0) {
+	}
 		alert(thisweek[0]+" "+thisweek[1]+" "+thisweek[2]);
-		alert(testweek[0]+" "+testweek[1]+" "+testweek[2]);
 			document.getElementById('hone').innerHTML = thisweek[0];
 			document.getElementById('hone').style.color = cl0;
 			document.getElementById('pdone').innerHTML = desc0;
@@ -158,8 +157,8 @@ var d, h, m, s;
 		document.getElementById('hthree').style.color = cl2;
 		document.getElementById('pdthree').innerHTML = desc2;
 		document.getElementById('pthree').src = imglink2;
-        /*} else {
-		alert(testweek[0]+" "+testweek[1]+" "+testweek[2]);
+        
+		/*alert(testweek[0]+" "+testweek[1]+" "+testweek[2]);
         	document.getElementById('hone').innerHTML = testweek[0];
 		document.getElementById('hone').style.color = cl0;
 		document.getElementById('pdone').innerHTML = desc0;
@@ -173,7 +172,6 @@ var d, h, m, s;
 		document.getElementById('pdthree').innerHTML = desc2;
 		document.getElementById('pthree').src = imglink2;
         }*/
-	}
   
   function loadTable() {
 	for (i=0;i<=11; i++) {
@@ -186,7 +184,7 @@ var d, h, m, s;
             }
         } //header invis
         document.getElementById('week00').style.color = "white"; 					
-		document.getElementById('week01').style.color = "white";
+	document.getElementById('week01').style.color = "white";
         document.getElementById('week02').style.color = "white";
     }
 }
