@@ -139,13 +139,16 @@ var d, h, m, s;
 			document.getElementById('hone').style.color = cl0;
 			document.getElementById('pdone').innerHTML = desc0;
 			document.getElementById('pone').src = imglink0;
+		document.getElementById('tw0').src = imglink0;
 			document.getElementById('htwo').innerHTML = thisweek[1];
 			document.getElementById('htwo').style.color = cl1;
 		document.getElementById('pdtwo').innerHTML = desc1;
 		document.getElementById('ptwo').src = imglink1;
+		document.getElementById('tw1').src = imglink1;
 		document.getElementById('hthree').innerHTML = thisweek[2];
 		document.getElementById('hthree').style.color = cl2;
 		document.getElementById('pdthree').innerHTML = desc2;
+		document.getElementById('tw2').src = imglink2;
 		document.getElementById('pthree').src = imglink2;
 	}
   function setweek(num) {
