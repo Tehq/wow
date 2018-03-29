@@ -23,7 +23,19 @@
         $(document).ready(function() {
             $('.tooltip').tooltipster();
         });
-    </script>
+	$('.tooltip').tooltipster({
+    		trigger: 'custom',
+    		triggerOpen: {
+        		mouseenter: true,
+        		touchstart: true
+    		},
+    		triggerClose: {
+        		click: true,
+        		scroll: true,
+        		tap: true
+    		}
+	});
+</script>
 	</head>
 <body>
 <div class="navbar" id ="navbar">
@@ -116,7 +128,7 @@ function myFunction() {
 	</style>
 
 <map id="map" name ="map">
-	<area class ="tooltip hover" title ="Rogues and Alchemists: instantly kill boss when he drinks it during the fight"  alt="Flask of the Solemn Night" coords="404,182,28" shape="circle" />
+	<area class ="tooltip" title ="Rogues and Alchemists: instantly kill boss when he drinks it during the fight"coords="404,182,28" shape="circle" />
     	<area class ="tooltip hover" title ="Rogues and Alchemists: instantly kill boss when he drinks it during the fight" alt="Flask of the Solemn Night" coords="338,143,403,184" shape="rect" />
 	<area target="" alt="Arcane Power Conduit" title="Arcane Power Conduit" href="#apc" coords="337,322,27" shape="circle">
     <area target="" alt="Wounded Nightborne Civilian" title="Wounded Nightborne Civilian" href="#wnc" coords="553,491,20" shape="circle">
