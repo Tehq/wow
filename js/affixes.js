@@ -11,8 +11,6 @@ function myFunction() {
   }
 }
 
-testweek = ["","",""];
-thisweek = [];
 var day;
 imglink0 = "";
 imglink1 = "";
@@ -138,7 +136,7 @@ var d, h, m, s;
         		cl2 = "red";
         //tyrannical
 		}
-	}
+	
 		//alert("this week "+thisweek[0]+" "+thisweek[1]+" "+thisweek[2]);
 			document.getElementById('hone').innerHTML = thisweek[0];
 			document.getElementById('hone').style.color = cl0;
@@ -152,6 +150,7 @@ var d, h, m, s;
 		document.getElementById('hthree').style.color = cl2;
 		document.getElementById('pdthree').innerHTML = desc2;
 		document.getElementById('pthree').src = imglink2;
+	}
   function setweek(num) {
 	alert("setting week "+num);
 	 allweeks = [["Sanguine", "Necrotic", "Fortified"], ["Bursting", "Skittish", "Tyrannical"], ["Teeming", "Quaking", "Fortified"], ["Raging", "Necrotic", "Tyrannical"], ["Bolstering", "Skittish", "Fortified"], ["Teeming", "Volcanic", "Tyrannical"], ["Sanguine", "Grevious", "Fortified"], ["Bolstering", "Explosive", "Tyrannical"], ["Bursting", "Quaking", "Fortified"],["Raging", "Volcanic", "Tyrannical"], ["Teeming", "Explosive", "Fortified"], ["Bolstering", "Grevious", "Tyrannical"]];
