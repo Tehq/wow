@@ -14,114 +14,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 	<link rel="stylesheet" type="text/css" href="css/home.css">
-	<link rel="stylesheet" type="text/css" href="tooltipster/dist/css/tooltipster.bundle.min.css" />
 	<script src="js/home.js"></script> 
 	<script src="js/jquery.js"></script>
-	<script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
 	<script src="rwdImageMaps.js"></script>
-
-<script type="text/javascript">	
-		$(document).ready(function() {
-			
-			$('.tooltip.hover').tooltipster({
-				trigger: 'hover'
-			});
-			
-			$('.tooltip.click').tooltipster({
-				trigger: 'click',
-				trackOrigin: true,
-				trackTooltip: true
-			});
-			
-			$('#custom_mouse_hover').tooltipster({
-				trigger: 'custom',
-				triggerOpen: {
-					mouseenter: true
-				},
-				triggerClose: {
-					mouseleave: true
-				}
-			});
-			$('#custom_mouse_click').tooltipster({
-				trigger: 'custom',
-				triggerOpen: {
-					click: true
-				},
-				triggerClose: {
-					click: true
-				}
-			});
-			$('#custom_touch_hover').tooltipster({
-				delayTouch: 0,
-				trigger: 'custom',
-				triggerOpen: {
-					touchstart: true
-				},
-				triggerClose: {
-					touchleave: true
-				}
-			});
-			$('#custom_touch_hoverinteractive').tooltipster({
-				interactive: true,
-				trigger: 'custom',
-				triggerOpen: {
-					touchstart: true
-				},
-				triggerClose: {
-					touchleave: true
-				}
-			});
-			$('#custom_touch_tap').tooltipster({
-				trigger: 'custom',
-				triggerOpen: {
-					tap: true
-				},
-				triggerClose: {
-					tap: true
-				}
-			});
-			$('#custom_touch_tapinteractive').tooltipster({
-				interactive: true,
-				trigger: 'custom',
-				triggerOpen: {
-					tap: true
-				},
-				triggerClose: {
-					tap: true
-				}
-			});
-			$('#custom_touch_clicktapscroll').tooltipster({
-				trigger: 'custom',
-				triggerOpen: {
-					click: true,
-					tap: true
-				},
-				triggerClose: {
-					scroll: true
-				}
-			});
-			
-			$('.inline').tooltipster({
-				content: 'Second',
-				multiple: true,
-				position: 'right'
-			});
-			$('.inline').tooltipster({
-				content: 'Third',
-				multiple: true,
-				position: 'bottom'
-			});
-			$('.inline').tooltipster({
-				content: 'Fourth',
-				multiple: true,
-				position: 'left'
-			});
-		});
-	</script>
-	
-	
-	
-	
 	</head>
 <body>
 <div class="navbar" id ="navbar">
@@ -214,7 +109,7 @@ function myFunction() {
 	</style>
 
 <map id="map" name ="map">
-	<area id ="custom_mouse_click" title ="Rogues and Alchemists: instantly kill boss when he drinks it during the fight" coords="404,182,28" shape="circle" />
+	<area title ="Rogues and Alchemists: instantly kill boss when he drinks it during the fight" coords="404,182,28" shape="circle" />
     	<area id ="custom_mouse_click" title ="Rogues and Alchemists: instantly kill boss when he drinks it during the fight" alt="Flask of the Solemn Night" coords="338,143,403,184" shape="rect" />
 	<area id ="custom_mouse_click" alt="Arcane Power Conduit" title="Engineers, Gnomes, Goblins: deactivate all Guardian Constructs in the dungeon"  coords="337,322,27" shape="circle">
     <area id ="custom_mouse_click" alt="Wounded Nightborne Civilian" title="Healers, Tailors, players with First Aid: distract a mini-boss" coords="553,491,20" shape="circle">
