@@ -10,7 +10,7 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
-
+testweek = [];
 var day;
 var desc0, desc1, desc2;
 var cl0, cl1, cl2;
