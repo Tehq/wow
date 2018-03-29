@@ -11,7 +11,7 @@ function myFunction() {
   }
 }
 
-testweek = [];
+testweek = thisweek;
 
 function setweek(num) {
 	alert("setting week "+num);
@@ -144,6 +144,7 @@ var d, h, m, s;
         //tyrannical
 		}
 	}
+	if (testweek == thisweek) {
 		alert(thisweek[0]+" "+thisweek[1]+" "+thisweek[2]);
 			document.getElementById('hone').innerHTML = thisweek[0];
 			document.getElementById('hone').style.color = cl0;
@@ -157,8 +158,8 @@ var d, h, m, s;
 		document.getElementById('hthree').style.color = cl2;
 		document.getElementById('pdthree').innerHTML = desc2;
 		document.getElementById('pthree').src = imglink2;
-        
-		/*alert(testweek[0]+" "+testweek[1]+" "+testweek[2]);
+	} else {
+		alert(testweek[0]+" "+testweek[1]+" "+testweek[2]);
         	document.getElementById('hone').innerHTML = testweek[0];
 		document.getElementById('hone').style.color = cl0;
 		document.getElementById('pdone').innerHTML = desc0;
@@ -171,7 +172,7 @@ var d, h, m, s;
 		document.getElementById('hthree').style.color = cl2;
 		document.getElementById('pdthree').innerHTML = desc2;
 		document.getElementById('pthree').src = imglink2;
-        }*/
+	}  
   
   function loadTable() {
 	for (i=0;i<=11; i++) {
