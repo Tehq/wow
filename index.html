@@ -21,11 +21,19 @@
 	<script src="rwdImageMaps.js"></script>
 <script>
 	$(document).ready(function() {
-            $('.tooltip').tooltipster();
-        });
-	$('.tooltip').tooltipster({
-   		trigger: 'click'
-});
+          $('#custom_mouse_click').tooltipster({
+    		trigger: 'custom',
+    		triggerOpen: {
+        		mouseenter: true,
+        		touchstart: true
+    		},
+    		triggerClose: {
+        		click: true,
+        		scroll: true,
+        		tap: true
+    		}
+	  }});
+	
 </script>
 	</head>
 <body>
