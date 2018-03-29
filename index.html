@@ -112,7 +112,7 @@ var urls = {
 };
 
 var margin = {top: 10, left: 10, bottom: 10, right: 10}
-  , width = parseInt(d3.select('#map').style('width'))
+  , width = parseInt(d3.select('#image-map').style('width'))
   , width = width - margin.left - margin.right
   , mapRatio = .5
   , height = width * mapRatio;
@@ -134,7 +134,7 @@ var colors = d3.scale.quantize()
     .range(colorbrewer.Greens[7]);
 
 // make a map
-var map = d3.select('#map').append('svg')
+var map = d3.select('#image-map').append('svg')
     .style('height', height + 'px')
     .style('width', width + 'px');
 
@@ -196,7 +196,7 @@ function render(err, us, data) {
 
 function resize() {
     // adjust things when the window size changes
-    width = parseInt(d3.select('#map').style('width'));
+    width = parseInt(d3.select('#image-map').style('width'));
     width = width - margin.left - margin.right;
     height = width * mapRatio;
 
