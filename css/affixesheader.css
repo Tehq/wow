@@ -107,6 +107,13 @@ body {
   background: #ccc;
 }
 
+.loginbtn {
+  float: right;
+  display: block;
+  color: black;
+  background-color: inherit;
+}
+
 @media screen and (max-width: 600px) {
   .navbar .search-container {
     float: none;
@@ -115,7 +122,7 @@ body {
     float: none;
     display: block;
     text-align: left;
-    width: 30%;
+    width: 100%;
     margin: 0;
     padding: 14px;
   }
