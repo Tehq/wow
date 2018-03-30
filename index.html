@@ -11,10 +11,11 @@
   gtag('config', 'UA-116545695-1');
 </script>
 	<title>Rankings</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<link rel="stylesheet" type="text/css" href="css/qtip.css">
+	<link rel="stylesheet" type="text/css" href="css/rankings.css">
 	<script src="js/home.js"></script> 
 	<script src="js/jquery.js"></script>
 	<script src="js/rwdImageMaps.js"></script>
@@ -35,14 +36,15 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
-	</script>
+</script>
+	
 <body onload = "updateHeader()">
 
 <div class="navbar" id ="navbar">
 	<a href ="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
   	<a href="index">Home</a>
   	<a href="rankings">Rankings</a>
-  	<div class="dropdown">
+  <div class="dropdown">
     <button class="dropbtn">Affixes
       <i class="fa fa-caret-down"></i>
     </button>
@@ -50,7 +52,6 @@ function myFunction() {
       <a href ="affixes">Now    <img style ="margin:0px 0px;float:right" id="tw1" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id="tw2" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id = "tw3" width = "20" height = "20"></a>
       <a href ="affixes">Next   <img style ="margin:0px 0px;float:right" id="nw1" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id="nw2" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id = "nw3" width = "20" height = "20"></a>
       <a href ="affixes">Then   <img style ="margin:0px 0px;float:right" id="an1" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id="an2" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id = "an3" width = "20" height = "20"></a>
-
     </div>
   </div>
 </div>
@@ -82,6 +83,7 @@ function myFunction() {
   </form>
 </div>
 </body>
+	
 <script>
 // Get the modal
 var modal = document.getElementById('id01');
@@ -94,27 +96,26 @@ window.onclick = function(event) {
 }
 </script>
 
-<div class = "map">
+<div class = "map">	
+	<h1 style="text-align:center; color:white">Court of Stars</h1>	
+	<img src="https://i.imgur.com/Di4QEe4.jpg" width = "1154" height = "768" usemap="#map">
+</div>
 	
-<h1 style="text-align:center; color:white">Court of Stars</h1>
-	
-<img src="https://i.imgur.com/Di4QEe4.jpg" width = "1154" height = "768" usemap="#map">
-	
-	<style>
-		img[usemap] {
+<style>
+	img[usemap] {
 		border: none;
 		height: auto;
 		max-width: 100%;
-			display: block;
-    	margin-left: auto;
-    	margin-right: auto;
-
+		display: block;
+    		margin-left: auto;
+    		margin-right: auto;
 		width: auto;
 	}
-		div {
+		/*div {
 		width: 100%;
-	}
-	</style>
+	}*/
+</style>
+	
 <script>
 $(document).ready(function () {
     // MAKE SURE YOUR SELECTOR MATCHES SOMETHING IN YOUR HTML!!!
@@ -149,20 +150,20 @@ $(document).ready(function () {
 });
 </script>
 	
-	<style>
-		.tooltip-content {
-    display: none;
-}
-	</style>
+<style>
+	.tooltip-content {
+    		display: none;
+	}
+</style>
 	
 <map id="map" name ="map">
 	<area alt ="Flask" title ="Rogues and Alchemists: instantly kill boss when he drinks it during the fight" coords="404,182,28" shape="circle" />
     	<area alt = "Flaskx" title ="Rogues and Alchemists: instantly kill boss when he drinks it during the fight" coords="338,143,403,184" shape="rect" />
 	<area alt="ArcanePowerConduit" title="Engineers, Gnomes, Goblins: deactivate all Guardian Constructs in the dungeon"  coords="337,322,27" shape="circle">
-    <area  alt="WoundedNightborneCivilian" title="Healers, Tailors, players with First Aid: distract a mini-boss" coords="553,491,20" shape="circle">
-    <area  alt="DiscardedJunk" title="Hunters and Blacksmiths: distract a mini-boss and instantly kill it (when stepped on)"  coords="726,373,26" shape="circle">
-    <area alt="BazarGoods" title="Rogues, Warriors, and Leatherworkers: distract a mini-boss"  coords="516,467,22" shape="circle">
-    <area  alt="FelOrb" title="Demon Hunters and Warlocks: +10% crit chance"  coords="532,386,25" shape="circle">
+	<area  alt="WoundedNightborneCivilian" title="Healers, Tailors, players with First Aid: distract a mini-boss" coords="553,491,20" shape="circle">
+	<area  alt="DiscardedJunk" title="Hunters and Blacksmiths: distract a mini-boss and instantly kill it (when stepped on)"  coords="726,373,26" shape="circle">
+        <area alt="BazarGoods" title="Rogues, Warriors, and Leatherworkers: distract a mini-boss"  coords="516,467,22" shape="circle">
+        <area  alt="FelOrb" title="Demon Hunters and Warlocks: +10% crit chance"  coords="532,386,25" shape="circle">
     <area alt="FelOrbx" title="Demon Hunters and Warlocks: +10% crit chance" coords="466,345,529,382" shape="rect">
     <area alt="BazarGoodsx" title="Rogues, Warriors, and Leatherworkers: distract a mini-boss"  coords="422,430,516,468" shape="rect">
     <area  alt="DiscardedJunkx" title="Hunters and Blacksmiths: distract a mini-boss and instantly kill it (when stepped on)"  coords="736,337,797,376" shape="rect">
@@ -276,10 +277,11 @@ window.onclick = function(event) {
     }
 }
 </script>
-	<script>
-		$(document).ready(function(e) {
-    $('img[usemap]').rwdImageMaps();
+	
+<script>
+	$(document).ready(function(e) {
+    		$('img[usemap]').rwdImageMaps();
 });
-	</script>
+</script>
 
 </html>
