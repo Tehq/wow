@@ -21,29 +21,25 @@
 	<script src="js/jquery.js"></script>  
 	<script src= "datatables/datatables.min.js"></script>
 	<script src="js/table.js"></script>  	
-	
-	
-
 </head>
 
-<body>
+<body onload = "updateClock();">
 
 <div class="navbar" id ="navbar">
 	<a href ="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
-
   	<a href="index">Home</a>
   	<a href="rankings">Rankings</a>
-  	<a href ="affixes">Affixes</a>
-  	<!--<div class="dropdown">
-    <button class="dropbtn">NYI 
+  	<div class="dropdown">
+    <button class="dropbtn">Affixes
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">NYI</a>
-      <a href="#">NYI</a>
-      <a href="#">NYI</a>
+      <a href ="affixes">Now    <img style ="margin:0px 0px;float:right" id="tw1" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id="tw2" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id = "tw3" width = "20" height = "20"></a>
+      <a href ="affixes">Next   <img style ="margin:0px 0px;float:right" id="nw1" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id="nw2" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id = "nw3" width = "20" height = "20"></a>
+      <a href ="affixes">Then   <img style ="margin:0px 0px;float:right" id="an1" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id="an2" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id = "an3" width = "20" height = "20"></a>
+
     </div>
-  </div> -->
+  </div>
 </div>
 
 <div id="id01" class="modal">
@@ -68,7 +64,7 @@
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="forgotpass.html">password</a></span>
+      <span class="psw">Forgot <a href="forgotpass">password</a></span>
     </div>
   </form>
 </div>
