@@ -11,8 +11,8 @@ body {
 }
 
 .topnav a {
-  float: left;
-  display: block;
+  float: right;
+  display: inline-block;
   color: black;
   text-align: center;
   padding: 14px 16px;
@@ -30,9 +30,13 @@ body {
   color: white;
 }
 
-.topnav .search-container {
-  float: none;
+.topnav .sidebtn {
+    float: left;
   display: inline-block;
+    border: none;
+  cursor: pointer;
+  background: inherit;
+  font-size: 17px;
 }
 
 .topnav input[type=text] {
@@ -40,31 +44,24 @@ body {
   margin-top: 8px;
   font-size: 17px;
   border: none;
-  float: none;
+  float: left;
   display: inline-block;
 }
-
-.topnav .search-container button {
-  float: none;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
+.topnav .searchbtn {
+    float: left;
+  display: inline-block;
+    border: none;
   cursor: pointer;
-  display: inline-block;
+  background: inherit;
+  font-size: 17px;
 }
 
-.topnav .search-container button:hover {
+.topnav .searchbtn:hover, .topnav .sidebtn:hover {
   background: #ccc;
 }
 
 @media screen and (max-width: 600px) {
-  .topnav .search-container {
-    float: none;
-  }
-  .topnav a, .topnav input[type=text], .topnav .search-container button {
+  .topnav a, .topnav input[type=text], .topnav button {
     float: none;
     display: inline-block;
     text-align: left;
