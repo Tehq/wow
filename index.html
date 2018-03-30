@@ -40,7 +40,8 @@ function myFunction() {
 	
 <body onload = "updateHeader()">
 <div id = "myNavbar" class ="navbar">
-	<img src="img/favicon.png" width="20" height ="20">
+	<img src="img/favicon.png" width="40" height ="40">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 	 <div class = "search-container">
       		<input type="text" placeholder="Search.." name="search">
       		<button type="submit"><i class="fa fa-search"></i></button>
@@ -66,9 +67,6 @@ function myFunction() {
   <a href="index" class ="active">Home</a>
   <a href="rankings">Rankings</a>
 </div>
-
-<!-- Use any element to open the sidenav -->
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 	
 <style>
 body {
