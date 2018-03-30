@@ -68,13 +68,16 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a, .topnav input[type=text], .topnav button {
+  .topnav a, .topnav input[type=text], .topnav .sidebtn {
     float: none;
     display: inline-block;
     text-align: left;
     /*width: 100%;*/
     margin: 0;
     padding: 8px; /*14*/
+  }
+  .topnav .searchbtn {
+    display: inline;
   }
   .topnav input[type=text] {
     border: 1px solid #ccc;  
