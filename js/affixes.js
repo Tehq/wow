@@ -17,7 +17,7 @@ var cl0, cl1, cl2;
 var startDateTime = new Date(2018, 2, 20, 11, 0, 0, 0);
 var startStamp = startDateTime.getTime();
 var timer;
-let incweek = 0;
+incweek = 0;
 var d, h, m, s;
     
 function setMisc(array) {
