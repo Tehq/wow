@@ -67,6 +67,26 @@ body {
   background: #ccc;
 }
 
+.sidenav .dropdown .dropbtn {
+  background: inherit;
+  color: '#818181';
+  /*affix button in side menu*/
+}
+.sidenav .dropdown .dropbtn:hover {
+  /*hover affix button side menu */
+  color: white;
+}
+.sidenav .dropdown .dropdown-content a {
+  background: inherit;
+  color: '#818181';
+  /* drop down links in side menu */
+}
+.sidenav .dropdown .dropdown-content a:hover {
+  color: white;
+  /* drop down links in side menu */
+}
+
+
 @media screen and (max-width: 600px) {
   .topnav input[type=text], .topnav .sidebtn {
     float: none;
