@@ -18,6 +18,7 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  margin-top: 5px;
 }
 
 .topnav a:hover {
@@ -33,15 +34,18 @@ body {
 .topnav .sidebtn {
     float: left;
   display: inline-block;
-    border: none;
+    border-style: none;
+  border: 0px;
+   margin-top: 5px;
   cursor: pointer;
   background: inherit;
+  padding: 14px 16px;
   font-size: 17px;
 }
 
 .topnav input[type=text] {
   padding: 6px;
-  margin-top: 8px;
+  margin-top: 5px;
   font-size: 17px;
   border: none;
   float: left;
@@ -50,8 +54,11 @@ body {
 .topnav .searchbtn {
     float: left;
   display: inline-block;
-    border: none;
+   margin-top: 5px;
+    border-style: none;
+  border: 0px;
   cursor: pointer;
+  padding: 14px 16px;
   background: inherit;
   font-size: 17px;
 }
@@ -67,7 +74,7 @@ body {
     text-align: left;
     /*width: 100%;*/
     margin: 0;
-    padding: 14px;
+    padding: 8px; /*14*/
   }
   .topnav input[type=text] {
     border: 1px solid #ccc;  
