@@ -39,7 +39,17 @@ function myFunction() {
 </script>
 	
 <body onload = "updateHeader()">
-
+<div id = "myNavbar" class ="navbar">
+	<img src="img/favicon.png" width="20" height ="20">
+	 <div class = "search-container">
+      		<input type="text" placeholder="Search.." name="search">
+      		<button type="submit"><i class="fa fa-search"></i></button>
+	</div>
+	 <div class ="loginbtn">
+	<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+	</div>
+	
+</div>
   <!--<div class="dropdown">
     <button class="dropbtn">Affixes
       <i class="fa fa-caret-down"></i>
@@ -50,30 +60,17 @@ function myFunction() {
       <a href ="affixes">Then   <img style ="margin:0px 0px;float:right" id="an1" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id="an2" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id = "an3" width = "20" height = "20"></a>
     </div>
   </div>-->
+</div>
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class = "search-container">
-      		<input type="text" placeholder="Search.." name="search">
-      		<button type="submit"><i class="fa fa-search"></i></button>
-	</div>
   <a href="index" class ="active">Home</a>
   <a href="rankings">Rankings</a>
-  <div class ="loginbtn">
-	<button onclick="document.getElementById('id01').style.display='block'">Login</button>
-	</div>
 </div>
 
 <!-- Use any element to open the sidenav -->
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 	
 <style>
-.sidenav .search-container{
-	display: inline-block;
-}
-	.sidenav .search-container button {
-	display:inline-block;	
-	}
-	
 body {
     font-family: "Lato", sans-serif;
 }
@@ -87,17 +84,17 @@ body {
     left: 0;
     background-color: #111;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.3s;
     padding-top: 60px;
 }
 
-.sidenav a {
+.sidenav a{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
     display: block;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .sidenav a:hover {
