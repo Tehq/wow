@@ -17,13 +17,13 @@
 	<link rel="stylesheet" type="text/css" href="css/affixes.css">
 <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css">
 	<script src="js/rankings.js"></script>
-	<script src="js/affixes.js"></script>
+	<script src="js/affixesheader.js"></script>
 	<script src="js/jquery.js"></script>  
 	<script src= "datatables/datatables.min.js"></script>
 	<script src="js/table.js"></script>  	
 </head>
 
-<body>
+<body onload = "updateHeader()">
 
 <div class="navbar" id ="navbar">
 	<a href ="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
@@ -86,7 +86,7 @@ window.onclick = function(event) {
 
 <br>
 <br>
-<body onload = "updateHeader();">
+<body>
 	<table id="table_id" class="display">
     <thead>
         <tr>
