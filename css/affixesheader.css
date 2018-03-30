@@ -38,13 +38,13 @@ body {
   color:black;
   cursor: pointer;
   background: inherit;
-  padding: 14px 16px;
+  padding: 10px 10px 10px 10px;
   font-size: 17px;
 }
 
 .topnav input[type=text] {
-  padding: 6px;
-  margin-top: 5px;
+  padding: 10px 5px 10px 5px;
+  margin-top: 10px;
   font-size: 17px;
   border: none;
   float: left;
@@ -55,7 +55,7 @@ body {
   display: inline-block;
   border: none;
   cursor: pointer;
-  padding: 5px 16px;
+  padding: 10px 0px 10px 0px;
   background: inherit;
   font-size: 17px;
   color: black;
