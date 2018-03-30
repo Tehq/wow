@@ -15,28 +15,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<link rel="stylesheet" type="text/css" href="css/qtip.css">
+	<link rel="stylesheet" type="text/css" href="css/affixes.css">
 	<script src="js/home.js"></script> 
 	<script src="js/jquery.js"></script>
 	<script src="js/rwdImageMaps.js"></script>
 	<script src="js/qtip.js"></script>
+	<script src="js/affixes.js"></script>
 	</head>
 <body>
 <div class="navbar" id ="navbar">
 	<a href ="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
-
-  	<a href="index.html">Home</a>
-  	<a href="rankings.html">Rankings</a>
-  	<a href ="affixes.html">Affixes</a>
-	<input type="text" x-webkit-speech />
+  	<a href="index">Home</a>
+  	<a href="rankings">Rankings</a>
   	<div class="dropdown">
-    <div class="dropdown">
     <button class="dropbtn">Affixes
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href ="affixes.html">Now    <img style ="margin:0px 0px; float:right" id="tw1" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id="tw2" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id = "tw3" width = "20" height = "20"></a>
-      <a href ="affixes.html">Next   <img style ="margin:0px 0px; float:right" id="nw1" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id="nw2" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id = "nw3" width = "20" height = "20"></a>
-      <a href ="affixes.html">After  <img style ="margin:0px 0px; float:right" id="an1" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id="an2" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id = "an3" width = "20" height = "20"></a>
+      <a href ="affixes">Now    <img style ="margin:0px 0px; float:right" id="tw1" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id="tw2" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id = "tw3" width = "20" height = "20"></a>
+      <a href ="affixes">Next   <img style ="margin:0px 0px; float:right" id="nw1" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id="nw2" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id = "nw3" width = "20" height = "20"></a>
+      <a href ="affixes">After  <img style ="margin:0px 0px; float:right" id="an1" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id="an2" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id = "an3" width = "20" height = "20"></a>
     </div>
   </div>
 </div>
@@ -123,8 +121,10 @@ $(document).ready(function () {
                 text: $('#map-' + elem.attr('alt')), // Attempt to grab content from #statesMap-<State> elements first
                 attr: 'alt' // No content? Grab the content from the 'alt' attribute
             },
-           	position: {my: 'top left',  // Position my top left...
-        at: 'bottom right' },
+           	position: {
+			my: 'top left',  // Position my top left...
+        		at: 'bottom right' 
+	},
             show: {
                 event: 'click',
                 solo: true
