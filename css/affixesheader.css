@@ -63,7 +63,7 @@
   background: #ccc;
 }
 
-.sidenav .dropdown Button {
+.sidenav .dropdown .dropbtn {
   background-color: #111111;
   color: #818181;
   font-size: 25px;
