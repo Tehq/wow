@@ -38,7 +38,7 @@ body {
   color:black;
   cursor: pointer;
   background: inherit;
-  padding: 10px 10px 10px 10px;
+  padding: 5px 15px;
   font-size: 17px;
 }
 
@@ -55,7 +55,7 @@ body {
   display: inline-block;
   border: none;
   cursor: pointer;
-  padding: 10px 0px 10px 0px;
+  padding: 5px 15px;
   background: inherit;
   font-size: 17px;
   color: black;
