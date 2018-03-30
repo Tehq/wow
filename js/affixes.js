@@ -1,23 +1,10 @@
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("navbar");
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-
 var day;
 var desc0, desc1, desc2;
 var cl0, cl1, cl2;
 var startDateTime = new Date(2018, 2, 20, 11, 0, 0, 0);
 var startStamp = startDateTime.getTime();
 var timer;
-incweek = 0;
+var incweek = 0;
 var d, h, m, s;
     
 function setMisc(array) {
