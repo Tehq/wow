@@ -164,6 +164,59 @@ function setMisc(array) {
 		document.getElementById('an2').src = imglink1;
 		document.getElementById('an3').src = imglink2;
 	}
+function updateHeader() {
+    		newDate = new Date();
+    		newStamp = newDate.getTime();
+    		var diff = Math.round((newStamp-startStamp)/1000);
+    
+     		d = Math.floor(diff/(24*60*60));
+    		diff = diff-(d*24*60*60);
+    		h = Math.floor(diff/(60*60));
+    		diff = diff-(h*60*60);
+    		m = Math.floor(diff/(60));
+    		diff = diff-(m*60);
+    		s = diff;
+    
+    		if (d/7 >= 1) {
+    			startDateTimedate = startDateTime.getDate() + 7;
+        		if (startDateTimedate > daysInMonth(startDateTime.getMonth+1, startDateTime.getFullYear)) {
+        			startDateTime.setDate(startDateTimedate - daysInMonth(startDateTime.getMonth+1, startDateTime.getFullYear));
+        			startDateTime.setMonth(startDateTime.getMonth+1);
+        		} else { 
+        			startDateTime.setDate(startDateTimedate);
+        		}
+        		startStamp = startDateTime.getTime();
+        		incweek = incweek + 1;
+        		if (incweek == 11) {
+        			incweek = 0;
+        		}
+        			updateClock();
+    		} else {
+    		}
+
+    		allweeks = [["Sanguine", "Necrotic", "Fortified"], ["Bursting", "Skittish", "Tyrannical"], ["Teeming", "Quaking", "Fortified"], ["Raging", "Necrotic", "Tyrannical"], ["Bolstering", "Skittish", "Fortified"], ["Teeming", "Volcanic", "Tyrannical"], ["Sanguine", "Grevious", "Fortified"], ["Bolstering", "Explosive", "Tyrannical"], ["Bursting", "Quaking", "Fortified"],["Raging", "Volcanic", "Tyrannical"], ["Teeming", "Explosive", "Fortified"], ["Bolstering", "Grevious", "Tyrannical"]];
+
+		thisweek = allweeks[incweek];
+		nextweek = allweeks[incweek+1];
+		twoweeks = allweeks[incweek+2];
+	
+		setMisc(thisweek);
+	
+		document.getElementById('tw1').src = imglink0;
+		document.getElementById('tw2').src = imglink1;
+		document.getElementById('tw3').src = imglink2;
+		
+		setMisc(nextweek);
+		
+		document.getElementById('nw1').src = imglink0;
+		document.getElementById('nw2').src = imglink1;
+		document.getElementById('nw3').src = imglink2;
+		
+		setMisc(twoweeks);
+		document.getElementById('an1').src = imglink0;
+		document.getElementById('an2').src = imglink1;
+		document.getElementById('an3').src = imglink2;
+	}
   function setweek(num) {
 	testweek = [];
 	 allweeks = [["Sanguine", "Necrotic", "Fortified"], ["Bursting", "Skittish", "Tyrannical"], ["Teeming", "Quaking", "Fortified"], ["Raging", "Necrotic", "Tyrannical"], ["Bolstering", "Skittish", "Fortified"], ["Teeming", "Volcanic", "Tyrannical"], ["Sanguine", "Grevious", "Fortified"], ["Bolstering", "Explosive", "Tyrannical"], ["Bursting", "Quaking", "Fortified"],["Raging", "Volcanic", "Tyrannical"], ["Teeming", "Explosive", "Fortified"], ["Bolstering", "Grevious", "Tyrannical"]];
