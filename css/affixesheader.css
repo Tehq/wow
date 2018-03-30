@@ -68,8 +68,12 @@ body {
 }
 
 .sidenav .dropdown .dropbtn {
-  background: black;
+  background-color: black;
   color: #818181;
+  font-size: 25px;
+  padding: 8px 8px 8px 32px;
+  display: block;
+  transition: 0.3s;
   /*affix button in side menu*/
 }
 .sidenav .dropdown .dropbtn:hover {
@@ -77,7 +81,7 @@ body {
   color: white;
 }
 .sidenav .dropdown .dropdown-content a {
-  background: black;
+  background-color: black;
   color: #818181;
   /* drop down links in side menu */
 }
