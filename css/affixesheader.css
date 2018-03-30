@@ -68,8 +68,8 @@ body {
 }
 
 .sidenav .dropdown .dropbtn {
-  background: inherit;
-  color: '#818181';
+  background: black;
+  color: #818181;
   /*affix button in side menu*/
 }
 .sidenav .dropdown .dropbtn:hover {
@@ -77,8 +77,8 @@ body {
   color: white;
 }
 .sidenav .dropdown .dropdown-content a {
-  background: inherit;
-  color: '#818181';
+  background: black;
+  color: #818181;
   /* drop down links in side menu */
 }
 .sidenav .dropdown .dropdown-content a:hover {
