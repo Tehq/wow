@@ -149,6 +149,17 @@ span.psw {
     font-family: inherit;
     margin: 0;
 }
+.dropbtnactive {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    position: sticky;
+    padding: 10px 16px;
+    background-color: red;
+    font-family: inherit;
+    margin: 0;
+}
 
 .dropdown-content {
     display: none;
