@@ -18,13 +18,12 @@
 	<link rel="stylesheet" type="text/css" href="css/affixesheader.css">
 	<script src="js/affixes.js"></script>
 </head>
+	
 <div class ="topnav">
-<a><button style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</button></a>
-  <div class="search-container">
+	<button class = "sidebtn" onclick="openNav()">&#9776;</button>
       <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-  </div>
-<a style ="float:right" href ="#" onclick="document.getElementById('id01').style.display='inline-block'">Login</a>
+      <button class ="searchbtn" type="submit"><i class="fa fa-search"></i></button>
+<a href ="#" onclick="document.getElementById('id01').style.display='inline-block'">Login</a>
 </div>
   <!--<div class="dropdown">
     <button class="dropbtn">Affixes
@@ -100,6 +99,7 @@ function openNav(){
 	}
 
 	</script>
+
 <div id="id01" class="modal">
   
   <form class="modal-content animate" action="/action_page.php">
