@@ -34,9 +34,8 @@ body {
 .topnav .sidebtn {
     float: left;
   display: inline-block;
-    border-style: none;
-  border: 0px;
-   margin-top: 0px;
+  border: none;
+  color:black;
   cursor: pointer;
   background: inherit;
   padding: 14px 16px;
@@ -54,13 +53,12 @@ body {
 .topnav .searchbtn {
     float: left;
   display: inline-block;
-   margin-top: 0px;
-    border-style: none;
-  border: 0px;
+  border: none;
   cursor: pointer;
   padding: 5px 16px;
   background: inherit;
   font-size: 17px;
+  color: black;
 }
 
 .topnav .searchbtn:hover, .topnav .sidebtn:hover {
