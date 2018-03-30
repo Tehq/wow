@@ -216,11 +216,24 @@ $(document).ready(function () {
 </script>
 
 <body onload = "updateHeader()">
-<div class = "map" id = "main">	
+<button onclick="showMap() id = "mapbtn">Hide Map</button>
+<div class = "map" id = "map">	
 	<h1 style="text-align:center; color:white">Court of Stars</h1>	
 	<img src="https://i.imgur.com/Di4QEe4.jpg" width = "1154" height = "768" usemap="#map">
 </div>
 </body>
+<script>
+function showMap() {
+    var x = document.getElementById("map");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+	document.getElementById("mapbtn").innerHTML = "Hide Map";
+    } else {
+        x.style.display = "none";
+	document.getElementById("mapbtn").innerHTML = "Show Map";
+    }
+}
+</script>
 
 <map id="map" name ="map">
 	<area alt ="Flask" title ="Rogues and Alchemists: instantly kill boss when he drinks it during the fight" coords="404,182,28" shape="circle" />
