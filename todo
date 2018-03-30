@@ -1,0 +1,23 @@
+fix:
+increase the size of the side menu
+place the search bar in (or closer to) the search bar on mobile
+remove the button border from affixes in the side menu
+stop the dropdown menu from auto filling before clicking
+make the side menu close when clicking outside of the window
+enable closing the side menu by clicking the icon again
+update the affixes sidebar (including previews to index, ranking, and forgot)
+
+add:
+all dungeon maps + points for each mob in the dungeon
+include base health, percentage count (click to add % to total)
+extra hp with fortified (on fortified weeks)
+
+[possible]
+links to abilities, npc models, m+ level slider to modify hp values
+= additional mobs with teeming
+
+goals:
+dungeon selector (searchable with # tags), auto hide all other dungeons, 
+filter rankings table by class, spec 
+searchable table (with pages for each player)
+display icons (found at img/class/spec.jpg) with username
