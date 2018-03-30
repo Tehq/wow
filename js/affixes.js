@@ -160,7 +160,6 @@ function setMisc(array) {
 		document.getElementById('nw3').src = imglink2;
 		
 		setMisc(twoweeks);
-		alert(twoweeks[0]+" "+twoweeks[1]+" "+twoweeks[2]);
 		document.getElementById('an1').src = imglink0;
 		document.getElementById('an2').src = imglink1;
 		document.getElementById('an3').src = imglink2;
