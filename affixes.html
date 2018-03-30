@@ -18,22 +18,118 @@
 	<link rel="stylesheet" type="text/css" href="css/affixesheader.css">
 	<script src="js/affixes.js"></script>
 </head>
-
-<div class="navbar" id ="navbar">
-  	<a href="index">Home</a>
-  	<a href="rankings">Rankings</a>
-   <div class="dropdown">
-    <button class="dropbtnactive">Affixes
+<body onload = "updateHeader()">
+	
+<div class ="topnav">
+<a><button style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</button></a>
+  <div class="search-container">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+  </div>
+<a style ="float:right" href ="#" onclick="document.getElementById('id01').style.display='inline-block'">Login</a>
+</div>
+  <!--<div class="dropdown">
+    <button class="dropbtn">Affixes
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
- <a href ="affixes">Now    <img style ="margin:0px 0px" id="tw1" width = "20" height = "20"> <img style ="margin:0px 0px" id="tw2" width = "20" height = "20"> <img style ="margin:0px 0px" id = "tw3" width = "20" height = "20"></a>
-      <a href ="affixes">Next   <img style ="margin:0px 0px" id="nw1" width = "20" height = "20"> <img style ="margin:0px 0px" id="nw2" width = "20" height = "20"> <img style ="margin:0px 0px" id = "nw3" width = "20" height = "20"></a>
-      <a href ="affixes">Then   <img style ="margin:0px 0px" id="an1" width = "20" height = "20"> <img style ="margin:0px 0px" id="an2" width = "20" height = "20"> <img style ="margin:0px 0px" id = "an3" width = "20" height = "20"></a>
-	</div>
-  </div>
-	<a style ="float:right" href ="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
+      <a href ="affixes">Now    <img style ="margin:0px 0px;float:right" id="tw1" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id="tw2" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id = "tw3" width = "20" height = "20"></a>
+      <a href ="affixes">Next   <img style ="margin:0px 0px;float:right" id="nw1" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id="nw2" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id = "nw3" width = "20" height = "20"></a>
+      <a href ="affixes">Then   <img style ="margin:0px 0px;float:right" id="an1" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id="an2" width = "20" height = "20"> <img style ="margin:0px 0px;float:right" id = "an3" width = "20" height = "20"></a>
+    </div>
+  </div>-->
+	
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index">Home</a>
+  <a href="rankings">Rankings</a>
+  <a href="affixes">Affixes</a>
 </div>
+	
+<style>
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: ;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+	</style>
+<script>	
+function openNav(){
+  	document.getElementById("mySidenav").style.width = "250px";
+    	document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+} //enable double click closing
+	function closeNav() {
+ document.getElementById("mySidenav").style.width = "0";
+    document.body.style.backgroundColor = "white";
+	}
+
+	</script>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="forgotpass">password</a></span>
+    </div>
+  </form>
+</div>
+</body>
 
 <div id="id01" class="modal">
   
