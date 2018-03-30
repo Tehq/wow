@@ -111,20 +111,16 @@ body {
   .sidenav a {font-size: 18px;}
 }
 	</style>
-<script>
-
-
-	
+<script>	
 function openNav(){
-	alert(document.getElementById("mySidenav").style.width);
- if(document.getElementById("mySidenav").style.width == "0px") {
   	document.getElementById("mySidenav").style.width = "250px";
     	document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-} else if (document.getElementById("mySidenav").style.width == "250px"){
+} //enable double click closing
+	function closeNav() {
  document.getElementById("mySidenav").style.width = "0";
     document.body.style.backgroundColor = "white";
-} else { }
-}
+	}
+
 	</script>
 
 <div id="id01" class="modal">
