@@ -28,6 +28,11 @@
     text-decoration: none;
 }
 
+.navbar a.active {
+    background-color: red;
+    color: white;
+}
+
 .dropdown {
     overflow: hidden;
     position: sticky;
