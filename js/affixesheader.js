@@ -112,7 +112,7 @@ function updateHeader() {
         		if (incweek == 11) {
         			incweek = 0;
         		}
-        			updateClock();
+        			updateHeader()
     		} else {
     		}
 
